@@ -13,13 +13,13 @@ Please note that this is still in prototype and under heavy development. The fin
 ![PlayerSettings](Assets/Block42/Wallet/Documents/00_playersettings.png)
 
 ## Settings
-ScriptableObject is used globally for wallet setting, assets the settings in menu through Block42 > Wallet > Settings
+ScriptableObject is used globally for wallet setting, access the settings in menu through Block42 > Wallet > Settings
 ![Menu Wallet Settings](Assets/Block42/Wallet/Documents/01_menu_wallet_settings.png)
 
 Inspector will show:
 ![Wallet Settings Inspector](Assets/Block42/Wallet/Documents/02_wallet_settings_inspector.png)
 
-Ropsten is set as default and used throughout all demos, you can use different testnet or custom network and provide the URL in settings.
+Ropsten is set as default and used throughout all demos, you can use different testnet or custom network and provide the URL in settings. Note the smart contracts are deployed in Ropsten, for trying demos in other networks or using your smart contracts, set the ABI and address of [ContractController](Assets/Block42/Wallet/Scripts/Contracts/ContractController.cs), see Demo [02-MyWalletBalance](Assets/Block42/Wallet/Demos/02-MyWalletBalance) for how to change them.
 
 ## Demos
 This projects contains a number of demos from basic to intermediate, go to [Demos](Assets/Block42/Wallet/Demos) folder for more details.
