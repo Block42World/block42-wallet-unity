@@ -1,9 +1,9 @@
 ![Block42](http://assets.block42.world/images/icons/block42_logo_200.png)
 
-# Block42 Wallet Unity Project
+# Block42 Unity Wallet Plugin
 
 ## About
-A Ethereum wallet and transaction system in Unity. This plug-in is inspired by Alto's [unit3d-blockchain-wallet](https://github.com/alto-io/unity3d-blockchain-wallet) and aim to be scalable to be used for all other projects with minimal coding. Changes includes separating UI logic from manager logic, optimize the code to follow Unity standard, as well as adding a number of demos learning purposes.
+A Ethereum wallet and transaction system in Unity. This plug-in is inspired by Alto's [unit3d-blockchain-wallet](https://github.com/alto-io/unity3d-blockchain-wallet) and aim to be scalable and easy-to-use for all other projects with minimal coding. Changes includes separating UI logic from manager logic, optimize the code to follow Unity standard, as well as adding a number of demos for learning purposes.
 
 Please note that this is still in prototype and under heavy development. The final product may be subject to a number of quality assurance tests to verify conformance with specifications.
 
@@ -19,7 +19,7 @@ ScriptableObject is used globally for wallet setting, access the settings in men
 Inspector will show:
 ![Wallet Settings Inspector](Assets/Block42/Wallet/Documents/02_wallet_settings_inspector.png)
 
-Ropsten is set as default and used throughout all demos, you can use different testnet or custom network and provide the URL in settings. Note the smart contracts are deployed in Ropsten, for trying demos in other networks or using your smart contracts, set the ABI and address of [ContractController](Assets/Block42/Wallet/Scripts/Contracts/ContractController.cs), see Demo [02-MyWalletBalance](Assets/Block42/Wallet/Demos/02-MyWalletBalance) for how to change them.
+Ropsten is set as default and used throughout all demos, you can use another testnet, or custom network by providing the URL in settings. Note the smart contracts used in demos were deployed in Ropsten. For trying the demos in other networks or using your own smart contracts, set the ABI and address of [ContractController](Assets/Block42/Wallet/Scripts/Contracts/ContractController.cs). See Demo [02-MyWalletBalance](Assets/Block42/Wallet/Demos/02-MyWalletBalance) for how to change them.
 
 ## Core Scripts
 - [`WalletManager`](Assets/Block42/Wallet/Scripts/WalletManager.cs): A master manager on managing wallets, such as create, save and load. This is a static class so all variables and methods can be easily access everywhere. Transactions are asynchronous and `Couroutine` is required to process transaction, and a static cannot execute coroutine. So, a [`CouroutineManager`](Assets/Block42/Common/Utils/CoroutineManager.cs) has to attached into the scene for this purpose.
