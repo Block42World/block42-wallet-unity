@@ -27,4 +27,4 @@ This projects contains a number of demos from basic to intermediate, go to [Demo
 
 ## Notes
 - [Nethereum](https://github.com/Nethereum/Nethereum) is used as the .NET integration library for Ethereum here. If you already have that in your project, you can safely delete [Plugins](Assets/Block42/Plugins) folder. 
-- [Nethereum.Web3](Assets/Block42/Plugins/Neteherum/Nethereum.Web3.dll) is used to demonstrate the difference of using Web3 and UnityRPCRequests in Demo [01-StaticWalletBalance](Assets/Block42/Wallet/Demos/01-StaticWalletBalance). If you are not using any Web3 library in your project, you can delete both to save building space.
+- [Nethereum.Web3](Assets/Block42/Plugins/Nethereum/Nethereum.Web3.dll) is used to demonstrate the difference of using Web3 and UnityRPCRequests in Demo [01-StaticWalletBalance](Assets/Block42/Wallet/Demos/01-StaticWalletBalance). If you are not using any Web3 library in your project, you can delete both to save building space.
