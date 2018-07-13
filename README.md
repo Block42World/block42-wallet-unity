@@ -10,14 +10,14 @@ Please note that this is still in prototype and under heavy development. The fin
 ## Requirements
 - Unity 2017+
 - Set Scripting Runtime Version to .NET 4.x Equivalent in PlayerSettings
-![PlayerSettings](Documents/00_playersettings.png)
+![PlayerSettings](Assets/Block42/Wallet/Documents/00_playersettings.png)
 
 ## Settings
 ScriptableObject is used globally for wallet setting, assets the settings in menu through Block42 > Wallet > Settings
-![Menu Wallet Settings](Documents/01_menu_wallet_settings.png)
+![Menu Wallet Settings](Assets/Block42/Wallet/Documents/01_menu_wallet_settings.png)
 
 Inspector will show:
-![Wallet Settings Inspector](Documents/02_wallet_settings_inspector.png)
+![Wallet Settings Inspector](Assets/Block42/Wallet/Documents/02_wallet_settings_inspector.png)
 
 Ropsten is set as default and used throughout all demos, you can use different testnet or custom network and provide the URL in settings.
 
