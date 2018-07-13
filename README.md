@@ -21,6 +21,11 @@ Inspector will show:
 
 Ropsten is set as default and used throughout all demos, you can use different testnet or custom network and provide the URL in settings. Note the smart contracts are deployed in Ropsten, for trying demos in other networks or using your smart contracts, set the ABI and address of [ContractController](Assets/Block42/Wallet/Scripts/Contracts/ContractController.cs), see Demo [02-MyWalletBalance](Assets/Block42/Wallet/Demos/02-MyWalletBalance) for how to change them.
 
+## Core Scripts
+- [`WalletManager`](Assets/Block42/Wallet/Scripts/WalletManager.cs): A master manager on managing wallets, such as create, save and load. This is a static class so all variables and methods can be easily access everywhere. Transactions are asynchronous and `Couroutine` is required to process transaction, and a static cannot execute coroutine. So, a [`CouroutineManager`](Assets/Block42/Common/Utils/CoroutineManager.cs) has to attached into the scene for this purpose.
+- [`ContractController`](Assets/Block42/Wallet/Scripts/Contracts/ContractController.cs): A base class that hold the ABI and address of the smart contract, all other contract should be inherent from this and attach to anywhere of the scene.
+- [`ERC20ContractController`](Assets/Block42/Wallet/Scripts/Contracts/ContractController.cs): a child class inherited from ContractController that implement all the method of a ERC20 standard token contract. 
+
 ## Demos
 This projects contains a number of demos from basic to intermediate, go to [Demos](Assets/Block42/Wallet/Demos) folder for more details.
 
