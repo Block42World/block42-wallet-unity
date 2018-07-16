@@ -11,9 +11,9 @@ Here you can put the address you're interested in. Play the scene and you can se
 ![Screenshot](/Documents/Demo-01-StaticWalletBalance/02_screenshot.png)
 
 ## Scripts Overview
-Open [StaticWallBalanceDemo](StaticWalletBalanceDemo.cs), this shows you two methods using Web3 and EthGetGalanceUnityRequest to get the wallet's ETH balance respectively:
+Open [StaticWallBalanceDemo.cs](StaticWalletBalanceDemo.cs), here you can see two methods using Web3 and EthGetGalanceUnityRequest to get the wallet's ETH balance respectively:
 
-EthGetGalanceUnityRequest:
+**EthGetGalanceUnityRequest**:
 ```
 private IEnumerator GetBalanceCoroutine(string address, UnityAction<decimal> callback)
 {
@@ -32,7 +32,7 @@ private IEnumerator GetBalanceCoroutine(string address, UnityAction<decimal> cal
 }
 ```
 
-Web3:
+**Web3**:
 ```
 // Send balance request using Web3, note that Web3 uses Task and await
 private async Task GetBalanceByWeb3(string address, UnityAction<decimal> callback)
