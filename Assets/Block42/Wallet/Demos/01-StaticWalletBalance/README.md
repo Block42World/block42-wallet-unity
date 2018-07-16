@@ -1,14 +1,14 @@
 ![Block42](http://assets.block42.world/images/icons/block42_logo_200.png)
 
 # Block42 Unity Wallet Demo 1 - Static Wallet Balance
-The first simple demo getting the ETH balance of a given address, and aim to demonstrate 2 ways archiving it by using Web3 or EthGetGalanceUnityRequest.
+The first simple demo getting the ETH balance of a given address, and aim to demonstrate two different ways archiving it by using Web3 or EthGetGalanceUnityRequest.
 
 ## Demo Scene
 Open [StaticWallBalanceDemo.unity](StaticWalletBalanceDemo.unity) scene, a [StaticWallBalanceDemo](StaticWalletBalanceDemo.cs) is attached at DemoScript:
-![Settings](/Documents/Demo01-StaticWalletBalance/01_settings.png)
+![Settings](/Documents/Demo-01-StaticWalletBalance/01_settings.png)
 
 Here you can put the address you're interested in. Play the scene and you can see:
-![Screenshot](/Documents/Demo01-StaticWalletBalance/02_screenshot.png)
+![Screenshot](/Documents/Demo-01-StaticWalletBalance/02_screenshot.png)
 
 ## Scripts Overview
 Open [StaticWallBalanceDemo](StaticWalletBalanceDemo.cs), this shows you two methods using Web3 and EthGetGalanceUnityRequest to get the wallet's ETH balance respectively:
