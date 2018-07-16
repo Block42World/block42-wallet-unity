@@ -11,10 +11,11 @@ Here you can put the address you're interested in. Play the scene and you can se
 ![Screenshot](/Documents/Demo-01-StaticWalletBalance/02_screenshot.png)
 
 ## Scripts Overview
-Open [StaticWallBalanceDemo.cs](StaticWalletBalanceDemo.cs), here you can see two methods using Web3 and EthGetGalanceUnityRequest to get the wallet's ETH balance respectively:
+Open [StaticWallBalanceDemo.cs](StaticWalletBalanceDemo.cs), here you can see two methods using `Web3` and `EthGetGalanceUnityRequest` to get the wallet's ETH balance respectively:
 
 **EthGetGalanceUnityRequest**:
 ```
+// Send balance request using EthGetGalanceUnityRequest, note that it uses coroutine
 private IEnumerator GetBalanceCoroutine(string address, UnityAction<decimal> callback)
 {
     var balanceRequest = new EthGetBalanceUnityRequest(WalletSettings.current.networkUrl);
@@ -43,4 +44,4 @@ private async Task GetBalanceByWeb3(string address, UnityAction<decimal> callbac
 }
 ```
 
-The most difference here is that EthGetGalanceUnityRequest and other [UnityRPCRequests](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Unity/UnityRPCRequests.cs) are using Unity's [Coroutines](https://docs.unity3d.com/Manual/Coroutines.html), while Web3 is using [Task](https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx). The syntax on how to using those will not be covered here. Furthermore, the rest demos will be using UnityRPCRequests since Web3 tutorials and demos can be found in many other places.
+The most difference here is that `EthGetGalanceUnityRequest` and other [`UnityRPCRequests`](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Unity/UnityRPCRequests.cs) are using Unity's [`Coroutines`](https://docs.unity3d.com/Manual/Coroutines.html), while `Web3` is using [`Task`](https://msdn.microsoft.com/en-us/library/system.threading.tasks.task(v=vs.110).aspx). The syntax on how to using those will not be covered here. Furthermore, the rest demos will be using `UnityRPCRequests` since `Web3` tutorials and demos can be found in many other places.
