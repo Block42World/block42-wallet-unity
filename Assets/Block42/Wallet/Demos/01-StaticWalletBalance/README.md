@@ -4,7 +4,7 @@
 The first simple demo getting the ETH balance of a given address, and aim to demonstrate two different ways archiving it by using Web3 or EthGetGalanceUnityRequest.
 
 ## Demo Scene
-Open [StaticWallBalanceDemo.unity](StaticWalletBalanceDemo.unity) scene, a [StaticWallBalanceDemo](StaticWalletBalanceDemo.cs) is attached at DemoScript:
+Open [StaticWallBalanceDemo.unity](StaticWalletBalanceDemo.unity) scene, a [StaticWallBalanceDemo.cs](StaticWalletBalanceDemo.cs) is attached at DemoScript:
 ![Settings](/Documents/Demo-01-StaticWalletBalance/01_settings.png)
 
 Here you can put the address you're interested in. Play the scene and you can see:

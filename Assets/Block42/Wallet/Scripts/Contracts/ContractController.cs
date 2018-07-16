@@ -22,7 +22,7 @@ namespace Block42
 
         private Contract _contract;
 
-        protected virtual void Start()
+        protected virtual void Awake()
         {
             _contract = new Contract(null, _abi, _address);
         }

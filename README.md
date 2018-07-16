@@ -27,9 +27,12 @@ Ropsten is set as default and used throughout all demos, you can use another tes
 - [`ERC20ContractController`](Assets/Block42/Wallet/Scripts/Contracts/ContractController.cs): a child class inherited from ContractController that implement all the method of a ERC20 standard token contract. 
 
 ## Demos
-This projects contains a number of demos from basic to intermediate, go to [Demos](Assets/Block42/Wallet/Demos) folder for more details.
+This projects contains a number of demos from basic to intermediate, go to each demo in [Demos](Assets/Block42/Wallet/Demos) folder for more details. It's recommended to spend 10 minutes to go through all demos before any integration.
 
 
 ## Notes
 - [Nethereum](https://github.com/Nethereum/Nethereum) is used as the .NET integration library for Ethereum here. If you already have that in your project, you can safely delete [Plugins](Assets/Block42/Plugins) folder. 
 - [Nethereum.Web3](Assets/Block42/Plugins/Nethereum/Nethereum.Web3.dll) is used to demonstrate the difference of using Web3 and UnityRPCRequests in Demo [01-StaticWalletBalance](Assets/Block42/Wallet/Demos/01-StaticWalletBalance). If you are not using any Web3 library in your project, you can delete both to save building space.
+
+## TODO
+- Add ERC721 token contract controller
