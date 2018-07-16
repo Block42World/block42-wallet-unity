@@ -5,10 +5,10 @@ The first simple demo getting the ETH balance of a given address, and aim to dem
 
 ## Demo Scene
 Open [StaticWallBalanceDemo.unity](StaticWalletBalanceDemo.unity) scene, a [StaticWallBalanceDemo](StaticWalletBalanceDemo.cs) is attached at DemoScript:
-![Settings](Docs/01_settings.png)
+![Settings](/Documents/Demo01-StaticWalletBalance/01_settings.png)
 
 Here you can put the address you're interested in. Play the scene and you can see:
-![Screenshot](Docs/02_screenshot.png)
+![Screenshot](/Documents/Demo01-StaticWalletBalance/02_screenshot.png)
 
 ## Scripts Overview
 Open [StaticWallBalanceDemo](StaticWalletBalanceDemo.cs), this shows you two methods using Web3 and EthGetGalanceUnityRequest to get the wallet's ETH balance respectively:

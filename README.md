@@ -10,14 +10,14 @@ Please note that this is still in prototype and under heavy development. The fin
 ## Requirements
 - Unity 2017+
 - Set Scripting Runtime Version to .NET 4.x Equivalent in PlayerSettings
-![PlayerSettings](Assets/Block42/Wallet/Documents/00_playersettings.png)
+![PlayerSettings](Documents/Intro/00_playersettings.png)
 
 ## Settings
 ScriptableObject is used globally for wallet setting, access the settings in menu through Block42 > Wallet > Settings
-![Menu Wallet Settings](Assets/Block42/Wallet/Documents/01_menu_wallet_settings.png)
+![Menu Wallet Settings](Documents/Intro/01_menu_wallet_settings.png)
 
 Inspector will show:
-![Wallet Settings Inspector](Assets/Block42/Wallet/Documents/02_wallet_settings_inspector.png)
+![Wallet Settings Inspector](Documents/Intro/02_wallet_settings_inspector.png)
 
 Ropsten is set as default and used throughout all demos, you can use another testnet, or custom network by providing the URL in settings. Note the smart contracts used in demos were deployed in Ropsten. For trying the demos in other networks or using your own smart contracts, set the ABI and address of [ContractController](Assets/Block42/Wallet/Scripts/Contracts/ContractController.cs). See Demo [02-MyWalletBalance](Assets/Block42/Wallet/Demos/02-MyWalletBalance) for how to change them.
 
