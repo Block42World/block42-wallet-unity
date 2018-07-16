@@ -27,7 +27,7 @@ Ropsten is set as default and used throughout all demos, you can use another tes
 - [`ERC20ContractController`](Assets/Block42/Wallet/Scripts/Contracts/ContractController.cs): a child class inherited from ContractController that implement all the method of a ERC20 standard token contract. 
 
 ## Demos
-This projects contains a number of demos from basic to intermediate, go to each demo in [Demos](Assets/Block42/Wallet/Demos) folder for more details. It's recommended to spend 10 minutes to go through all demos before any integration.
+This projects contains a number of demos from basic to intermediate, go to each demo in [Demos](Assets/Block42/Wallet/Demos) folder for more details. It's recommended to spend 10 minutes to go through all demos before any integration. 
 
 
 ## Notes
@@ -36,3 +36,4 @@ This projects contains a number of demos from basic to intermediate, go to each 
 
 ## TODO
 - Add ERC721 token contract controller
+- Add Travis CI for build test

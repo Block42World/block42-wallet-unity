@@ -6,12 +6,19 @@ namespace Block42
 	public class CubikContractController : ERC20TokenContractController
 	{
 
-		public static CubikContractController Instance { get; private set; }
+		private static CubikContractController _instance;
+		public static CubikContractController Instance {
+			get {
+				if (_instance == null)
+					throw new System.Exception("CubikContractController instance is not added into the scene.");
+				return _instance;
+			}
+		}
 
 		protected override void Awake()
 		{
 			base.Awake();
-			Instance = this;
+			_instance = this;
 		}
 
 	}
