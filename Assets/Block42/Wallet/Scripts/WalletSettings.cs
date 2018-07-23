@@ -17,9 +17,6 @@ namespace Block42
 
 		public EthereumNetwork network = EthereumNetwork.Ropsten;
         public string customNetworkUrl = "http://nsgpwp.oqi.io:9549";
-        //public string tokenAbi;
-        //public string tokenContractAddress = "0xb4fddd37602b03fa086c42bfa7b9739be38682c3";
-        //public string tokenOwnerAddress = "0x6e62b9d357f65b774c15cf3f571310af246bbe1f";
 
         public string networkUrl {
             get {
@@ -39,6 +36,24 @@ namespace Block42
                 }
             }
         }
+
+		// Etherescan url for debug
+		public string networkEtherscanUrl {
+			get {
+				switch (network)
+				{
+					case EthereumNetwork.Ropsten:
+						return "https://ropsten.etherscan.io/";
+					case EthereumNetwork.Kovan:
+						return "https://kovan.etherscan.io/";
+					case EthereumNetwork.Rinkeby:
+						return "https://rinkeby.etherscan.io/";
+					default:
+						return "https://etherscan.io/";
+				}
+			}
+		}
+
     }
 
 }

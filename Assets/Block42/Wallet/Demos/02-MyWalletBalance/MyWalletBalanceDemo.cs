@@ -8,7 +8,7 @@ namespace Block42
 
 		[SerializeField] protected Text _walletAddressText, _balanceEthText, _balanceTokenText;
 
-		void Start()
+		protected void Start()
 		{
 			if (WalletManager.CurrentWallet == null)
 			{
@@ -34,6 +34,11 @@ namespace Block42
                 Debug.LogFormat("MyWalletBalanceDemo:Start - CubikContractController.Instance.BalanceOf() returned, balance={0}", balance);
                 _balanceTokenText.text = balance.ToString();
 			});
+		}
+
+		public void OnWalletLinkClick()
+		{
+			WalletManager.OpenEtherscanAddress();
 		}
 
 	}

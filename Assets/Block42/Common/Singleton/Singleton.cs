@@ -3,52 +3,51 @@ using System;
 
 namespace Block42
 {
+	
 	/// <summary>
 	/// Singleton class
 	/// </summary>
 	/// <typeparam name="T">Type of the singleton</typeparam>
 	public abstract class Singleton<T> : MonoBehaviour where T : Singleton<T>
 	{
-		private static T s_instance;
+		private static T _instance;
 
 		/// <summary>
 		/// The static reference to the instance
 		/// </summary>
-		public static T s_Instance
+		public static T Instance
 		{
 			get
 			{
-				return s_instance;
+				if (!InstanceExists) { // Create a GameObject and attach an instance if not found
+					GameObject gameObject = new GameObject(typeof(T).Name.ToString());
+					_instance = gameObject.AddComponent<T>();
+				}
+				return _instance;
 			}
 			protected set
 			{
-				s_instance = value;
+				_instance = value;
 			}
 		}
 
 		/// <summary>
 		/// Gets whether an instance of this singleton exists
 		/// </summary>
-		public static bool s_InstanceExists { get { return s_instance != null; } }
+		public static bool InstanceExists { get { return _instance != null; } }
 
-		public static event Action InstanceSet;
+		public static event Action instanceSetEvent;
 
 		/// <summary>
 		/// Awake method to associate singleton with instance
 		/// </summary>
 		protected virtual void Awake()
 		{
-			if (s_instance != null)
-			{
+			if (_instance != null) {
 				Destroy(gameObject);
-			}
-			else
-			{
-				s_instance = (T)this;
-				if (InstanceSet != null)
-				{
-					InstanceSet();
-				}
+			} else {
+				_instance = (T)this;
+				instanceSetEvent?.Invoke();
 			}
 		}
 
@@ -57,10 +56,10 @@ namespace Block42
 		/// </summary>
 		protected virtual void OnDestroy()
 		{
-			if (s_instance == this)
-			{
-				s_instance = null;
-			}
+			if (_instance == this)
+				_instance = null;
 		}
+
 	}
+
 }
