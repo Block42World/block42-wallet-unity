@@ -26,11 +26,11 @@ namespace Block42
                     case EthereumNetwork.Mainnet:
                         return "https://api.myetherapi.com/eth";
                     case EthereumNetwork.Ropsten:
-                        return "https://ropsten.infura.io/93Pkd62SaFUrBJZC646Ah";
+						return "https://ropsten.infura.io/v3/6469dd6b6c614a20ab3efb85cc1c7b1d";
                     case EthereumNetwork.Kovan:
-                        return "https://kovan.infura.io/93Pkd62SaFUrBJZC646A";
+						return "https://kovan.infura.io/v3/6469dd6b6c614a20ab3efb85cc1c7b1d";
                     case EthereumNetwork.Rinkeby:
-                        return "https://rinkeby.infura.io/93Pkd62SaFUrBJZC646Ah";
+						return "https://rinkeby.infura.io/v3/6469dd6b6c614a20ab3efb85cc1c7b1d";
                     default:
                         return customNetworkUrl;
                 }
@@ -53,6 +53,10 @@ namespace Block42
 				}
 			}
 		}
+
+		public int gasPrice = 1;
+
+		public bool debugLog = false;
 
     }
 

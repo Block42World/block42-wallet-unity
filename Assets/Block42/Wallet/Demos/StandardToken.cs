@@ -35,12 +35,10 @@ namespace Block42
             return await _tokenContract.GetFunction("balanceOf").CallAsync<BigInteger>(addr);
         }
 
-
         public async Task UnlockAcct(string addr, string password)
         {
             Debug.Assert(await _web3.Personal.UnlockAccount.SendRequestAsync(addr, password, new HexBigInteger(300)));
         }
-
 
         public async Task Transfer(string receiver, BigInteger amount, string sender)
         {
@@ -52,7 +50,6 @@ namespace Block42
 
             Debug.Log("Transaction Hash: " + hash);
         }
-
 
         public async void Approve(string receiver, BigInteger amount, string sender)
         {
@@ -74,7 +71,6 @@ namespace Block42
             Debug.Log("Transaction Hash: " + hash);
         }
 
-
         public async void TransferFrom(string fromaddr, string toaddr, BigInteger amount, string sender)
         {
             var func = _tokenContract.GetFunction("transferFrom");
@@ -85,7 +81,6 @@ namespace Block42
             Debug.Log("Transaction Hash: " + hash);
         }
 
-
         public async void TransferOwnership(string newOwner, string sender)
         {
             var func = _tokenContract.GetFunction("transferOwnership");
@@ -95,7 +90,6 @@ namespace Block42
 
             Debug.Log("Transaction Hash: " + hash);
         }
-
 
         public async void FreezeAccount(string targetAddress, bool freeze, string sender)
         {

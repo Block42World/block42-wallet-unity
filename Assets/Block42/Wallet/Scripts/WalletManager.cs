@@ -141,13 +141,13 @@ namespace Block42
 		{
 			// Use EthGetBalanceUnityRequest from the Nethereum lib to send balance request
 			var balanceRequest = new EthGetBalanceUnityRequest(WalletSettings.current.networkUrl);
-			// Then we call the method SendRequest() from the getBalanceRequest we created with the address and the newest created teblock.
+			// Then we call the method SendRequest() from the getBalanceRequest we created with the address and the newest created block
 			yield return balanceRequest.SendRequest(address, BlockParameter.CreateLatest());
 
 			// Now we check if the request has an exception
 			if (balanceRequest.Exception == null)
 			{
-				// We define balance and assign the value that the getBalanceRequest gave us.
+				// We define balance and assign the value that the getBalanceRequest gave us
 				var balance = balanceRequest.Result.Value;
 				// Finally we execute the callback and we use the Netherum.Util.UnitConversion
 				// to convert the balance from WEI to ETHER (that has 18 decimal places)
@@ -164,25 +164,35 @@ namespace Block42
 
 		#region Transfer
 
-		public static void Transfer(string addressTo, decimal amount, UnityAction<string> onSucceed = null, UnityAction<System.Exception> onFailed = null)
+		public static void Transfer(string addressTo, decimal amount, UnityAction<string> onSubmitted = null, UnityAction onCompleted = null, UnityAction<System.Exception> onFailed = null)
 		{
-			CoroutineManager.Start(TransferCoroutine(addressTo, amount, onSucceed, onFailed));
+			CoroutineManager.Start(TransferCoroutine(addressTo, amount, onSubmitted, onCompleted, onFailed));
 		}
 
 		// Send transfer request using TransactionSignedUnityRequest
-		private static IEnumerator TransferCoroutine(string addressTo, decimal amount, UnityAction<string> onSucceed, UnityAction<System.Exception> onFailed)
+		private static IEnumerator TransferCoroutine(string addressTo, decimal amount, UnityAction<string> onSubmitted = null, UnityAction onCompleted = null, UnityAction<System.Exception> onFailed = null)
 		{
-			// Create a request
+			// Use TransactionSignedUnityRequest from the Nethereum lib to create a transaction request
 			var transactionSignedRequest = new TransactionSignedUnityRequest(WalletSettings.current.networkUrl, CurrentWalletPrivateKey, CurrentWalletAddress);
-
 			// Create the input, if no gas and gas price are used, it uses the default value
 			var transactionInput = new TransactionInput(null, addressTo, new HexBigInteger(UnitConversion.Convert.ToWei(amount, 18)));
-
+			// Then we call the method SignAndSendTransaction() from the transactionSignedRequest we created with the transaction input
 			yield return transactionSignedRequest.SignAndSendTransaction(transactionInput);
 
+			// Now we check if the request has an exception
 			if (transactionSignedRequest.Exception == null)
 			{
-				onSucceed?.Invoke(transactionSignedRequest.Result);
+				onSubmitted?.Invoke(transactionSignedRequest.Result);
+
+				// Keep checking the transaction receipt if an onCompleted used
+				if (onCompleted != null)
+				{
+					GetTransactionReceipt(transactionSignedRequest.Result, 5, (transactionReceipt) => // Retry for every 5 seconds
+					{
+						if (transactionReceipt != null)
+							onCompleted();
+					});
+				}
 			}
 			else
 			{
@@ -190,33 +200,37 @@ namespace Block42
 			}
 		}
 
-		public static void CheckTransaction(string transactionHash, UnityAction<decimal> onSucceed = null, UnityAction<System.Exception> onFailed = null)
+		public static void GetTransactionReceipt(string transactionHash, int secondsResendIfNoResult = 5, UnityAction<TransactionReceipt> onSucceed = null, UnityAction<System.Exception> onFailed = null)
 		{
-			CoroutineManager.Start(CheckTransactionCoroutine(transactionHash, onSucceed, onFailed));
+			if (WalletSettings.current.debugLog)
+				Debug.LogFormat("WalletManager:CheckTransaction({0})", transactionHash);
+			CoroutineManager.Start(CheckTransactionCoroutine(transactionHash, secondsResendIfNoResult, onSucceed, onFailed));
 		}
 
-		// Send balance request using EthGetGalanceUnityRequest
-		private static IEnumerator CheckTransactionCoroutine(string transactionHash, UnityAction<decimal> onSucceed, UnityAction<System.Exception> onFailed)
+		private static IEnumerator CheckTransactionCoroutine(string transactionHash, int secondsResendIfNoResult = 5, UnityAction<TransactionReceipt> onSucceed = null, UnityAction<System.Exception> onFailed = null)
 		{
-			// Use EthGetBalanceUnityRequest from the Nethereum lib to send balance request
-			var newPendingTransactionRequest = new EthNewPendingTransactionFilterUnityRequest(WalletSettings.current.networkUrl);
-			// Then we call the method SendRequest() from the getBalanceRequest we created with the address and the newest created teblock.
-			yield return newPendingTransactionRequest.SendRequest();
+			yield return new WaitForSeconds(secondsResendIfNoResult); // Wait few seconds for receipt to return
+
+			// Use EthGetTransactionReceiptUnityRequest from the Nethereum lib to get transaction receipt
+			var getTransactionReceiptRequest = new EthGetTransactionReceiptUnityRequest(WalletSettings.current.networkUrl);
+			// Then we call the method SendRequest() from the getTransactionReceiptRequest we created with the transaction hash
+			yield return getTransactionReceiptRequest.SendRequest(transactionHash);
 
 			// Now we check if the request has an exception
-			if (newPendingTransactionRequest.Exception == null)
+			if (getTransactionReceiptRequest.Exception == null)
 			{
-				// We define balance and assign the value that the getBalanceRequest gave us.
-				var result = newPendingTransactionRequest.Result;
-				Debug.Log("CheckTransactionCoroutine|" + result);
-				//// Finally we execute the callback and we use the Netherum.Util.UnitConversion
-				//// to convert the balance from WEI to ETHER (that has 18 decimal places)
-				//onSucceed?.Invoke(UnitConversion.Convert.FromWei(balance, 18));
+				onSucceed?.Invoke(getTransactionReceiptRequest.Result);
+				if (secondsResendIfNoResult > 0 && getTransactionReceiptRequest.Result == null)
+				{
+					if (WalletSettings.current.debugLog)
+						Debug.LogFormat("WalletManager:CheckTransaction - No receipt returned yet, try again in {0} seconds...", secondsResendIfNoResult);
+					GetTransactionReceipt(transactionHash, secondsResendIfNoResult, onSucceed, onFailed);
+				}
 			}
 			else
 			{
 				// If there was an error we just call the onFailed callback
-				onFailed?.Invoke(newPendingTransactionRequest.Exception);
+				onFailed?.Invoke(getTransactionReceiptRequest.Exception);
 			}
 		}
 
@@ -249,6 +263,12 @@ namespace Block42
 					UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
 				}
 			}
+		}
+
+		[UnityEditor.MenuItem("Block42/Wallet/Open Local Wallet Data Folder")]
+		private static void OpenLocalWalletDataFolder()
+		{
+			UnityEditor.EditorUtility.RevealInFinder(_filePath);
 		}
 
 #endif

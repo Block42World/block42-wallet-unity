@@ -25,6 +25,7 @@ namespace Block42
         protected virtual void Awake()
         {
             _contract = new Contract(null, _abi, _address);
+			Debug.Log(_contract);
         }
 
 		protected Function GetFunction(string name)

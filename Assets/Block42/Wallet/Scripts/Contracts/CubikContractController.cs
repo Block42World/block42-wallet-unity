@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 namespace Block42
 {
-	// A abstract base class that interact with Ethereum contract, all contracts should inherent from this calss.
+	// This is just a singleton wrapper of a ERC20TokenContractController, for easier access without reference.
 	public class CubikContractController : ERC20TokenContractController
 	{
 
