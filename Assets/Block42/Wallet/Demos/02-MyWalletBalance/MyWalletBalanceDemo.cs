@@ -41,6 +41,20 @@ namespace Block42
 			WalletManager.OpenEtherscanAddress();
 		}
 
+		public void OnWalletAddressClick()
+		{
+			CopyToClipboard(_walletAddressText.text);
+		}
+
+		protected void CopyToClipboard(string s)
+		{
+			TextEditor te = new TextEditor();
+			te.text = s;
+			te.SelectAll();
+			te.Copy();
+			Debug.Log("Copied to clipboard: \n" + s);
+		}
+
 	}
 
 }

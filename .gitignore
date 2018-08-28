@@ -1,11 +1,18 @@
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
 /[Bb]uilds/
+/[Ll]ibrary/
+/[Oo]bj/
+/[Pp]ckages/
+/[Tt]emp/
 
-# /Assets/AssetStoreTools*
-# /Assets/Plugins/GitHub.meta
-# /Assets/Plugins/GitHub/
+
+/Assets/Plugins/GitHub/
+/Assets/Plugins/GitHub.meta
+/Assets/BlockchainWallet/
+/Assets/BlockchainWallet.meta
+/Assets/Nethereum.Flappy/
+/Assets/Nethereum.Flappy.meta
+/Asseta/TextureImporter.preset
+/Asseta/TextureImporter.preset.meta
 
 # Visual Studio cache directory
 /.vs/

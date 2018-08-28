@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdaf630aea3b2419eb3501be86cfe2c7, type: 3}
   m_Name: WalletSettings
   m_EditorClassIdentifier: 
-  network: 2
+  network: 0
   customNetworkUrl: http://nsgpwp.oqi.io:9549
-  debugMode: 1
+  gasPrice: 1
+  debugLog: 0
