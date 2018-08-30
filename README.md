@@ -19,7 +19,7 @@ ScriptableObject is used globally for wallet setting, access the settings in men
 Inspector will show:
 ![Wallet Settings Inspector](Documents/Intro/02_wallet_settings_inspector.png)
 
-Ropsten is set as default and used throughout all demos, you can use another testnet, or custom network by providing the URL in settings. Note the smart contracts used in demos were deployed in Ropsten. For trying the demos in other networks or using your own smart contracts, set the ABI and address of [ContractController](Assets/Block42/Wallet/Scripts/Contracts/ContractController.cs). See Demo [02-MyWalletBalance](Assets/Block42/Wallet/Demos/02-MyWalletBalance) for how to change them.
+Ropsten is set as default and used throughout all demos, you can use another testnet, or custom network by providing the URL in settings. Note that the smart contracts used in demos were deployed in Ropsten. For trying the demos in other networks or using your own smart contracts, deploy the contracts accordingly and set the ABI and the address in [ContractController](Assets/Block42/Wallet/Scripts/Contracts/ContractController.cs). See Demo [02-MyWalletBalance](Assets/Block42/Wallet/Demos/02-MyWalletBalance) on how to change them.
 
 ## Core Scripts
 - [`WalletManager`](Assets/Block42/Wallet/Scripts/WalletManager.cs): A master manager on managing wallets, such as create, save and load. This is a static class so all variables and methods can be easily access everywhere. Transactions are asynchronous and `Couroutine` is required to process transaction. For easier access, a [`CouroutineManager`](Assets/Block42/Common/Utils/CoroutineManager.cs) is automatically created for handling all coroutines of static classes.
@@ -32,7 +32,8 @@ This projects contains a number of demos from basic to intermediate, go to each 
 
 ## Notes
 - [Nethereum](https://github.com/Nethereum/Nethereum) is used as the .NET integration library for Ethereum here. If you already have that in your project, you can safely delete [Plugins](Assets/Block42/Plugins) folder. 
-- [Nethereum.Web3](Assets/Block42/Plugins/Nethereum/Nethereum.Web3.dll) is used to demonstrate the difference of using Web3 and UnityRPCRequests in Demo [01-StaticWalletBalance](Assets/Block42/Wallet/Demos/01-StaticWalletBalance). If you are not using any Web3 library in your project, you can delete both to save building space.
+- [Nethereum.Web3](Assets/Block42/Plugins/Nethereum/Nethereum.Web3.dll) is used to demonstrate the difference of using Web3 and UnityRPCRequests in Demo [01-StaticWalletBalance](Assets/Block42/Wallet/Demos/01-StaticWalletBalance). If you are not using any Web3 library in your project, you can delete the library to save building space.
+- [Nethereum.Geth](Assets/Block42/Plugins/Nethereum/Nethereum.Geth) is used to demonstrate how to mine ethereum of using Geth in Demo [04-Mining](Assets/Block42/Wallet/Demos/04-Mining). If you are not using any Geth library in your project or not mining in Unity, you can delete library to save building space.
 
 ## TODO
 - Add ERC721 token contract controller
