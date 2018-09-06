@@ -7,7 +7,7 @@ The pre-first demo shows the chain network status, such as block number, miner, 
 Open [NetworkStatusDemo.unity](NetworkStatusDemo.unity) scene, a [NetworkStatusDemo.cs](NetworkStatusDemo.cs) is attached at DemoScript.
 
 Run play, the info will be retrived and printed out:
-![Screenshot](/Documents/Demo-00-NetworkStatusDemo/01_screenshot.png)
+![Screenshot](/Documents/Demo-00-NetworkStatus/01_screenshot.png)
 
 ## Scripts Overview
 In [NetworkStatusDemo.cs](NetworkStatusDemo.cs), it uses EthXxxxRequest from Nethereum library to interact with the chosen blockchain:
