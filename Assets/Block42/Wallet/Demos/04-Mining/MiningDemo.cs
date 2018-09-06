@@ -61,10 +61,14 @@ namespace Block42
 			Debug.Log("MiningDemo:CheckNewBlock()");
 			System.Numerics.BigInteger lastCheckBlockNumber = 0;
 			var wait = new WaitForSeconds(5); // Check every 5 seconds
-			while (true) {
+			while (true)
+			{
+				
 				var blockNumberRequest = new EthBlockNumberUnityRequest(WalletSettings.current.networkUrl);
 				yield return blockNumberRequest.SendRequest();
-				if (blockNumberRequest.Exception == null) {
+
+				if (blockNumberRequest.Exception == null)
+				{
 					var blockNumber = blockNumberRequest.Result.Value;
 					if (lastCheckBlockNumber == 0)
 					{
@@ -72,20 +76,34 @@ namespace Block42
 					}
 					else if (lastCheckBlockNumber != blockNumber)
 					{
+						
 						lastCheckBlockNumber = blockNumber;
 						Debug.LogFormat("MiningDemo:CheckNewBlock - New block detected, blockNumber={0}", blockNumber);
-						var getBlockWithNumberRequest = new EthGetBlockWithTransactionsByNumberUnityRequest(WalletSettings.current.networkUrl);
-						yield return getBlockWithNumberRequest.SendRequest(new Nethereum.Hex.HexTypes.HexBigInteger(lastCheckBlockNumber));
-						if (getBlockWithNumberRequest.Exception == null)
+						var getBlockByNumberRequest = new EthGetBlockWithTransactionsByNumberUnityRequest(WalletSettings.current.networkUrl);
+						yield return getBlockByNumberRequest.SendRequest(new Nethereum.Hex.HexTypes.HexBigInteger(lastCheckBlockNumber));
+
+						if (getBlockByNumberRequest.Exception == null)
 						{
-							if (getBlockWithNumberRequest.Result.Miner.ToLower() == WalletManager.CurrentWalletAddress.ToLower()) {
+							if (getBlockByNumberRequest.Result.Miner.ToLower() == WalletManager.CurrentWalletAddress.ToLower())
+							{
 								UpdateBalance();
 								_statusText.text = string.Format("Successfully mined! Block number: {0}.", blockNumber);
 							}
 						}
+						else
+						{
+							throw new System.InvalidOperationException("Block number request failed, exception=" + getBlockByNumberRequest.Exception);
+						}
+
 					}
 				}
+				else
+				{
+					throw new System.InvalidOperationException("Block number request failed, exception=" + blockNumberRequest.Exception);
+				}
+
 				yield return wait;
+
 			}
 		}
 

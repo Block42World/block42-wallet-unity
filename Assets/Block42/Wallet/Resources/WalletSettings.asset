@@ -11,7 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdaf630aea3b2419eb3501be86cfe2c7, type: 3}
   m_Name: WalletSettings
   m_EditorClassIdentifier: 
-  network: 5
-  customNetworkUrl: http://localhost:8741
+  network: 2
+  customNetworkUrl: http://18.237.214.100:8142
   gasPrice: 1
+  offChainMode: 0
   debugLog: 0

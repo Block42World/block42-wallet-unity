@@ -12,28 +12,6 @@ using UnityEngine.Events;
 namespace Block42
 {
 
-	[System.Serializable]
-	public class WalletData
-	{
-		public string name;
-		public string address;
-		public string encryptedJson;
-		public string privateKey;
-
-		public WalletData(string name, string address, string encryptedJson, string privateKey)
-		{
-			this.name = name;
-			this.address = address;
-			this.encryptedJson = encryptedJson;
-			this.privateKey = privateKey;
-		}
-
-		public override string ToString()
-		{
-			return string.Format("[WalletData - name={0}, address={1}, encryptedJson={2}, privateKey={3}", name, address, encryptedJson, privateKey);
-		}
-	}
-
 	public static class WalletManager
 	{
 
@@ -236,6 +214,20 @@ namespace Block42
 
 		#endregion
 
+		#region Tools
+
+		public static void CopyToClipboard(string s)
+		{
+			TextEditor te = new TextEditor
+			{
+				text = s
+			};
+			te.SelectAll();
+			te.Copy();
+		}
+
+		#endregion
+
 		#region Debug
 
 		public static void OpenEtherscanAddress()
@@ -269,6 +261,17 @@ namespace Block42
 		private static void OpenLocalWalletDataFolder()
 		{
 			UnityEditor.EditorUtility.RevealInFinder(_filePath);
+		}
+
+		[UnityEditor.MenuItem("Block42/Wallet/Print First Wallet Address")]
+		private static void PrintFirstWalletAddress()
+		{
+			if (CurrentWallet == null)
+				LoadWallets();
+			if (CurrentWallet == null)
+				CreateWallet("Account", "Password");
+			Debug.Log(CurrentWalletAddress);
+			CopyToClipboard(CurrentWalletAddress);
 		}
 
 #endif

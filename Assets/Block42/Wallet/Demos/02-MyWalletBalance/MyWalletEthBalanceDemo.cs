@@ -40,16 +40,7 @@ namespace Block42
 
 		public void OnWalletAddressClick()
 		{
-			CopyToClipboard(_walletAddressText.text);
-		}
-
-		protected void CopyToClipboard(string s)
-		{
-			TextEditor te = new TextEditor();
-			te.text = s;
-			te.SelectAll();
-			te.Copy();
-			Debug.Log("Copied to clipboard: \n" + s);
+			WalletManager.CopyToClipboard(_walletAddressText.text);
 		}
 
 	}
