@@ -34,8 +34,9 @@ A rich log mode for debugging purpose.
 
 ## Core Scripts
 - [`WalletManager`](Assets/Block42/Wallet/Scripts/WalletManager.cs): A master manager on managing wallets, such as create, save and load. This is a static class so all variables and methods can be easily access everywhere. Transactions are asynchronous and `Couroutine` is required to process transaction. For easier access, a [`CouroutineManager`](Assets/Block42/Common/Utils/CoroutineManager.cs) is automatically created for handling all coroutines of static classes.
-- [`ContractController`](Assets/Block42/Wallet/Scripts/Contracts/ContractController.cs): A base class that hold the ABI and address of the smart contract, all other contract should be inherent from this and attach to anywhere of the scene.
-- [`ERC20ContractController`](Assets/Block42/Wallet/Scripts/Contracts/ContractController.cs): a child class inherited from ContractController that implement all the method of a ERC20 standard token contract. 
+- [`ContractController`](Assets/Block42/Wallet/Scripts/Contracts/ContractController.cs): A base class that holds the ABI and address of the smart contract, all other contract should be inherent from this and attach to anywhere of the scene.
+- [`ERC20ContractController`](Assets/Block42/Wallet/Scripts/Contracts/ContractController.cs): A child class inherited from ContractController that implements all the method of a ERC20 standard token contract. 
+- ERC721ContractController: (TODO) Same as `ERC20ContractController` but implements a ERC721 standard token contract.
 
 ## Demos
 This projects contains a number of demos from basic to intermediate, go to each demo in [Demos](Assets/Block42/Wallet/Demos) folder for more details. It's recommended to spend 10 minutes to go through all demos before any integration. 
