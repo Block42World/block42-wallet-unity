@@ -8,7 +8,7 @@ Open [**MyWalletBalanceDemo.unity**](MyWalletBalanceDemo.unity) scene, DemoScrip
 ![Settings](/Documents/Demo-02-MyWalletBalance/01_demo_scripts.png)
 
 - [**MyWalletBalanceDemo.cs**](MyWalletBalanceDemo.cs): Contains the demo logic and UI display
-- [**CubikContractController.cs**](../../Scripts/Contracts/CubikContractController.cs): Cubik is a ERC20 token used in Block42. This script is just a wrapper of [**ERC20TokenContractController.cs**](../../Scripts/Contracts/ERC20TokenContractController.cs) plus providing an instance for easy access. You can have your own ERC20 token and inherent **ERC20TokenContractController.cs**. Contract's ABI, address and decimals have to be entered here.
+- [**CubikContractController.cs**](../../Scripts/Contracts/CubikContractController.cs): Cubik is an ERC20 token used in all demos and Block42 game. This script is just a wrapper of [**ERC20TokenContractController.cs**](../../Scripts/Contracts/ERC20TokenContractController.cs), plus providing an instance for easy access. You can have your own ERC20 token and inherent **ERC20TokenContractController.cs**. Contract's ABI, address and decimals have to be entered here.
 
 
 Play the scene and you can see your own wallet with balance. Stop the game, send some ETH and token to the address in MetaMask or Mist, play the game again to spot the balance change:
