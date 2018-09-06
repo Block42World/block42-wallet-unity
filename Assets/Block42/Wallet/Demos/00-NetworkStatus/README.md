@@ -12,13 +12,8 @@ Run play, the info will be retrived and printed out:
 ## Scripts Overview
 In [NetworkStatusDemo.cs](NetworkStatusDemo.cs), it uses EthXxxxRequest from Nethereum library to interact with the chosen blockchain:
 
-**EthBlockNumberUnityRequest**:
-Gets the total block number in the chaiin.
-
-**EthGasPriceUnityRequest**:
-Gets the current gas price in the chain.
-
-**EthGetBlockWithTransactionsByNumberUnityRequest**:
-Gets the block info given a block number in the chain.
+- **`EthBlockNumberUnityRequest`**: Gets the total block number in the chaiin.
+- **`EthGasPriceUnityRequest`**: Gets the current gas price in the chain.
+- **`EthGetBlockWithTransactionsByNumberUnityRequest`**: Gets the block info given a block number in the chain.
 
 Notes that EthXxxxRequest is a coroutine and has to run using `StartCoroutine()`. More use-cases and explanations for different EthXxxxRequest will be cover in next demos.
