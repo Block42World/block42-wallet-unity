@@ -1,0 +1,74 @@
+INFO [09-10|13:44:57.969] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [09-10|13:44:57.978] Starting peer-to-peer node               instance=Geth/v1.8.13-stable/darwin-amd64/go1.10.2
+INFO [09-10|13:44:57.978] Allocated cache and file handles         database=/Users/fur/Library/Ethereum/geth/chaindata cache=768 handles=128
+INFO [09-10|13:44:57.993] Initialised chain configuration          config="{ChainID: 1 Homestead: 1150000 DAO: 1920000 DAOSupport: true EIP150: 2463000 EIP155: 2675000 EIP158: 2675000 Byzantium: 4370000 Constantinople: <nil> Engine: ethash}"
+INFO [09-10|13:44:57.994] Disk storage enabled for ethash caches   dir=/Users/fur/Library/Ethereum/geth/ethash count=3
+INFO [09-10|13:44:57.994] Disk storage enabled for ethash DAGs     dir=/Users/fur/.ethash                      count=2
+INFO [09-10|13:44:57.994] Initialising Ethereum protocol           versions="[63 62]" network=1
+INFO [09-10|13:44:57.996] Loaded most recent local header          number=0 hash=8d1337…7a2f17 td=17179869184
+INFO [09-10|13:44:57.996] Loaded most recent local full block      number=0 hash=8d1337…7a2f17 td=17179869184
+INFO [09-10|13:44:57.996] Loaded most recent local fast block      number=0 hash=8d1337…7a2f17 td=17179869184
+INFO [09-10|13:44:57.996] Loaded local transaction journal         transactions=0 dropped=0
+INFO [09-10|13:44:57.996] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [09-10|13:44:57.998] Starting P2P networking 
+INFO [09-10|13:45:00.128] UDP listener up                          self=enode://1d73637b4668d925ebc3b39d70b7cbced2fcb2a9fd92112614ad78968e6f714edd06a29cd69d0952c4d0b3c3351cad6d79829bdd731e223a945b0bc3c1aaedac@[::]:30303
+INFO [09-10|13:45:00.129] RLPx listener up                         self=enode://1d73637b4668d925ebc3b39d70b7cbced2fcb2a9fd92112614ad78968e6f714edd06a29cd69d0952c4d0b3c3351cad6d79829bdd731e223a945b0bc3c1aaedac@[::]:30303
+INFO [09-10|13:45:00.131] IPC endpoint opened                      url=/Users/fur/Library/Ethereum/geth.ipc
+INFO [09-10|13:45:12.088] Got interrupt, shutting down... 
+INFO [09-10|13:45:12.088] IPC endpoint closed                      endpoint=/Users/fur/Library/Ethereum/geth.ipc
+INFO [09-10|13:45:12.088] Blockchain manager stopped 
+INFO [09-10|13:45:12.089] Stopping Ethereum protocol 
+INFO [09-10|13:45:12.089] Ethereum protocol stopped 
+INFO [09-10|13:45:12.089] Transaction pool stopped 
+INFO [09-10|13:45:12.089] Database closed                          database=/Users/fur/Library/Ethereum/geth/chaindata
+INFO [09-10|14:38:27.985|cmd/utils/flags.go:871] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [09-10|14:38:27.993|node/node.go:166]       Starting peer-to-peer node               instance=Geth/Client_1/v1.8.13-stable/darwin-amd64/go1.10.2
+INFO [09-10|14:38:27.993|ethdb/database.go:71]   Allocated cache and file handles         database=/Users/fur/Projects/Block42Wallet/chaindata/geth/chaindata cache=768 handles=128
+INFO [09-10|14:38:28.005|eth/backend.go:119]     Initialised chain configuration          config="{ChainID: 8100442 Homestead: 1 DAO: <nil> DAOSupport: false EIP150: 2 EIP155: 3 EIP158: 3 Byzantium: 4 Constantinople: <nil> Engine: ethash}"
+INFO [09-10|14:38:28.005|consensus/ethash/ethash.go:421] Disk storage enabled for ethash caches   dir=/Users/fur/Projects/Block42Wallet/chaindata/geth/ethash count=3
+INFO [09-10|14:38:28.005|consensus/ethash/ethash.go:424] Disk storage enabled for ethash DAGs     dir=/Users/fur/.ethash                                      count=2
+INFO [09-10|14:38:28.005|eth/backend.go:136]             Initialising Ethereum protocol           versions="[63 62]" network=8100442
+INFO [09-10|14:38:28.006|core/blockchain.go:254]         Loaded most recent local header          number=1658 hash=7f9274…096b32 td=1117684784
+INFO [09-10|14:38:28.006|core/blockchain.go:255]         Loaded most recent local full block      number=1658 hash=7f9274…096b32 td=1117684784
+INFO [09-10|14:38:28.006|core/blockchain.go:256]         Loaded most recent local fast block      number=1658 hash=7f9274…096b32 td=1117684784
+INFO [09-10|14:38:28.006|core/tx_journal.go:114]         Loaded local transaction journal         transactions=0 dropped=0
+INFO [09-10|14:38:28.006|core/tx_journal.go:166]         Regenerated local transaction journal    transactions=0 accounts=0
+WARN [09-10|14:38:28.006|eth/handler.go:117]             Blockchain not empty, fast sync disabled 
+INFO [09-10|14:38:28.007|p2p/server.go:396]              Starting P2P networking 
+INFO [09-10|14:38:28.008|p2p/server.go:743]              RLPx listener up                         self="enode://ce3e51046df204cba9a57bdba6d5621fa87f3ae6a8ad9085b006fa4382be8e43790cc9241bcbf57b2a0fbe35b0eacf438298bf40b775954402e686ae626707d7@[::]:30303?discport=0"
+INFO [09-10|14:38:28.009|node/node.go:315]               IPC endpoint opened                      url=/Users/fur/Projects/Block42Wallet/chaindata/geth.ipc
+INFO [09-10|14:38:28.009|node/node.go:343]               HTTP endpoint opened                     url=http://127.0.0.1:8142                                cors=* vhosts=localhost
+INFO [09-10|14:38:28.009|core/tx_pool.go:472]            Transaction pool price threshold updated price=18000000000
+INFO [09-10|14:38:28.009|eth/backend.go:319]             Etherbase automatically configured       address=0x17713fBB2443b9a4a91fA5c0214100AF5489E86F
+INFO [09-10|14:38:28.009|miner/miner.go:116]             Starting mining operation 
+INFO [09-10|14:38:28.009|miner/worker.go:488]            Commit new mining work                   number=1659 txs=0 uncles=0 elapsed=72.612µs
+INFO [09-10|14:38:36.651|miner/agent.go:104]             Successfully sealed new block            number=1659 hash=53a94d…e092fb
+INFO [09-10|14:38:36.656|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1659 hash=53a94d…e092fb
+INFO [09-10|14:38:36.656|miner/worker.go:488]            Commit new mining work                   number=1660 txs=0 uncles=0 elapsed=60.541µs
+INFO [09-10|14:38:42.789|miner/agent.go:104]             Successfully sealed new block            number=1660 hash=33f1dd…0ecbe7
+INFO [09-10|14:38:42.789|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1660 hash=33f1dd…0ecbe7
+INFO [09-10|14:38:42.789|miner/worker.go:488]            Commit new mining work                   number=1661 txs=0 uncles=0 elapsed=46.374µs
+INFO [09-10|14:38:45.338|miner/agent.go:104]             Successfully sealed new block            number=1661 hash=82102f…30fb64
+INFO [09-10|14:38:45.344|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1661 hash=82102f…30fb64
+INFO [09-10|14:38:45.344|miner/worker.go:488]            Commit new mining work                   number=1662 txs=0 uncles=0 elapsed=62.906µs
+INFO [09-10|14:38:49.924|consensus/ethash/sealer.go:95]  Mined a golden block at sender 
+INFO [09-10|14:38:49.924|miner/agent.go:104]             Successfully sealed new block            number=1662 hash=f81d6a…13651c
+INFO [09-10|14:38:49.924|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1662 hash=f81d6a…13651c
+INFO [09-10|14:38:49.925|miner/worker.go:488]            Commit new mining work                   number=1663 txs=0 uncles=0 elapsed=61.033µs
+INFO [09-10|14:39:12.731|miner/agent.go:104]             Successfully sealed new block            number=1663 hash=5b58e3…0fb19a
+INFO [09-10|14:39:12.738|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1663 hash=5b58e3…0fb19a
+INFO [09-10|14:39:12.739|miner/worker.go:488]            Commit new mining work                   number=1664 txs=0 uncles=0 elapsed=68.592µs
+INFO [09-10|14:39:13.146|cmd/utils/cmd.go:75]            Got interrupt, shutting down... 
+INFO [09-10|14:39:13.147|node/node.go:358]               HTTP endpoint closed                     url=http://127.0.0.1:8142
+INFO [09-10|14:39:13.147|node/node.go:325]               IPC endpoint closed                      endpoint=/Users/fur/Projects/Block42Wallet/chaindata/geth.ipc
+INFO [09-10|14:39:13.147|core/blockchain.go:672]         Writing cached state to disk             block=1663 hash=5b58e3…0fb19a root=ca54ae…f9e11e
+INFO [09-10|14:39:13.147|trie/database.go:659]           Persisted trie from memory database      nodes=3 size=1.05kB time=65.487µs gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-10|14:39:13.147|core/blockchain.go:672]         Writing cached state to disk             block=1662 hash=f81d6a…13651c root=ca54ae…f9e11e
+INFO [09-10|14:39:13.147|trie/database.go:659]           Persisted trie from memory database      nodes=0 size=0.00B  time=843ns    gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-10|14:39:13.149|core/blockchain.go:672]         Writing cached state to disk             block=1536 hash=0a3dc3…471185 root=ebb9c3…786967
+INFO [09-10|14:39:13.149|trie/database.go:659]           Persisted trie from memory database      nodes=0 size=0.00B  time=2.857µs  gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-10|14:39:13.149|core/blockchain.go:685]         Blockchain manager stopped 
+INFO [09-10|14:39:13.149|eth/handler.go:221]             Stopping Ethereum protocol 
+INFO [09-10|14:39:13.149|eth/handler.go:242]             Ethereum protocol stopped 
+INFO [09-10|14:39:13.149|core/tx_pool.go:445]            Transaction pool stopped 
+INFO [09-10|14:39:13.150|ethdb/database.go:146]          Database closed                          database=/Users/fur/Projects/Block42Wallet/chaindata/geth/chaindata

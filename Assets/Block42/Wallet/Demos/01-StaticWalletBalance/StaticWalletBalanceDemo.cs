@@ -81,6 +81,16 @@ namespace Block42
             callback(Nethereum.Util.UnitConversion.Convert.FromWei(balance, 18));
         }
 
+		public void OnWalletLinkClick()
+		{
+			WalletManager.OpenEtherscanAddress(_address);
+		}
+
+		public void OnWalletAddressClick()
+		{
+			WalletManager.CopyToClipboard(_address);
+		}
+
     }
 
 }

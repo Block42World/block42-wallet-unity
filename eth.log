@@ -1,0 +1,532 @@
+INFO [09-07|15:19:24.644] Maximum peer count                       ETH=25 LES=0 total=25
+Fatal: Option "etherbase": invalid account address or index "“0x04c5f5db5528ad97Add7d3A10ba07D81e141fAE3“"
+INFO [09-07|15:20:25.998] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [09-07|15:20:26.007] Starting peer-to-peer node               instance=Geth/Client_AC86D7D7-C27F-5B7D-B29B-5634FDC5E110/v1.8.13-stable/darwin-amd64/go1.10.2
+INFO [09-07|15:20:26.008] Allocated cache and file handles         database=/Users/fur/Projects/Block42Wallet/chaindata/geth/chaindata cache=768 handles=128
+INFO [09-07|15:20:26.037] Initialised chain configuration          config="{ChainID: 8100442 Homestead: 1 DAO: <nil> DAOSupport: false EIP150: 2 EIP155: 3 EIP158: 3 Byzantium: 4 Constantinople: <nil> Engine: ethash}"
+INFO [09-07|15:20:26.037] Disk storage enabled for ethash caches   dir=/Users/fur/Projects/Block42Wallet/chaindata/geth/ethash count=3
+INFO [09-07|15:20:26.037] Disk storage enabled for ethash DAGs     dir=/Users/fur/.ethash                                      count=2
+INFO [09-07|15:20:26.038] Initialising Ethereum protocol           versions="[63 62]" network=8100442
+INFO [09-07|15:20:26.042] Loaded most recent local header          number=1572 hash=719506…ed998e td=1050962697
+INFO [09-07|15:20:26.042] Loaded most recent local full block      number=1572 hash=719506…ed998e td=1050962697
+INFO [09-07|15:20:26.042] Loaded most recent local fast block      number=1572 hash=719506…ed998e td=1050962697
+INFO [09-07|15:20:26.043] Loaded local transaction journal         transactions=0 dropped=0
+INFO [09-07|15:20:26.043] Regenerated local transaction journal    transactions=0 accounts=0
+WARN [09-07|15:20:26.044] Blockchain not empty, fast sync disabled 
+INFO [09-07|15:20:26.046] Starting P2P networking 
+INFO [09-07|15:20:26.049] RLPx listener up                         self="enode://ce3e51046df204cba9a57bdba6d5621fa87f3ae6a8ad9085b006fa4382be8e43790cc9241bcbf57b2a0fbe35b0eacf438298bf40b775954402e686ae626707d7@[::]:30303?discport=0"
+INFO [09-07|15:20:26.055] IPC endpoint opened                      url=/Users/fur/Projects/Block42Wallet/chaindata/geth.ipc
+INFO [09-07|15:20:26.055] HTTP endpoint opened                     url=http://127.0.0.1:8142                                cors=* vhosts=localhost
+INFO [09-07|15:20:36.052] Block synchronisation started 
+ERROR[09-07|15:20:37.649] 
+########## BAD BLOCK #########
+Chain config: {ChainID: 8100442 Homestead: 1 DAO: <nil> DAOSupport: false EIP150: 2 EIP155: 3 EIP158: 3 Byzantium: 4 Constantinople: <nil> Engine: ethash}
+
+Number: 1573
+Hash: 0x7e3c61e6f6ec250860427b3cc7220592b8678a996b8f44d5ef6986fafb0c38df
+
+
+Error: version blocked
+##############################
+ 
+WARN [09-07|15:20:37.649] Synchronisation failed, dropping peer    peer=d6a19c04c67e0e67 err="retrieved hash chain is invalid"
+INFO [09-07|15:21:03.534] Got interrupt, shutting down... 
+INFO [09-07|15:21:03.534] HTTP endpoint closed                     url=http://127.0.0.1:8142
+INFO [09-07|15:21:03.534] IPC endpoint closed                      endpoint=/Users/fur/Projects/Block42Wallet/chaindata/geth.ipc
+INFO [09-07|15:21:03.539] Writing cached state to disk             block=1572 hash=719506…ed998e root=a8f390…f8bf73
+INFO [09-07|15:21:03.539] Persisted trie from memory database      nodes=0 size=0.00B time=27.759µs gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-07|15:21:03.540] Writing cached state to disk             block=1571 hash=854d70…8c9f4b root=a8f390…f8bf73
+INFO [09-07|15:21:03.540] Persisted trie from memory database      nodes=0 size=0.00B time=1.643µs  gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-07|15:21:03.540] Writing cached state to disk             block=1445 hash=5f6822…d02798 root=8381f1…b908a6
+INFO [09-07|15:21:03.540] Persisted trie from memory database      nodes=0 size=0.00B time=1.307µs  gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-07|15:21:03.540] Blockchain manager stopped 
+INFO [09-07|15:21:03.540] Stopping Ethereum protocol 
+INFO [09-07|15:21:03.540] Ethereum protocol stopped 
+INFO [09-07|15:21:03.540] Transaction pool stopped 
+INFO [09-07|15:21:03.541] Database closed                          database=/Users/fur/Projects/Block42Wallet/chaindata/geth/chaindata
+INFO [09-07|15:21:12.495|cmd/utils/flags.go:871] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [09-07|15:21:12.503|node/node.go:166]       Starting peer-to-peer node               instance=Geth/Client_AC86D7D7-C27F-5B7D-B29B-5634FDC5E110/v1.8.13-stable/darwin-amd64/go1.10.2
+INFO [09-07|15:21:12.503|ethdb/database.go:71]   Allocated cache and file handles         database=/Users/fur/Projects/Block42Wallet/chaindata/geth/chaindata cache=768 handles=128
+INFO [09-07|15:21:12.513|eth/backend.go:119]     Initialised chain configuration          config="{ChainID: 8100442 Homestead: 1 DAO: <nil> DAOSupport: false EIP150: 2 EIP155: 3 EIP158: 3 Byzantium: 4 Constantinople: <nil> Engine: ethash}"
+INFO [09-07|15:21:12.513|consensus/ethash/ethash.go:421] Disk storage enabled for ethash caches   dir=/Users/fur/Projects/Block42Wallet/chaindata/geth/ethash count=3
+INFO [09-07|15:21:12.513|consensus/ethash/ethash.go:424] Disk storage enabled for ethash DAGs     dir=/Users/fur/.ethash                                      count=2
+INFO [09-07|15:21:12.513|eth/backend.go:136]             Initialising Ethereum protocol           versions="[63 62]" network=8100442
+INFO [09-07|15:21:12.514|core/blockchain.go:254]         Loaded most recent local header          number=1572 hash=719506…ed998e td=1050962697
+INFO [09-07|15:21:12.514|core/blockchain.go:255]         Loaded most recent local full block      number=1572 hash=719506…ed998e td=1050962697
+INFO [09-07|15:21:12.514|core/blockchain.go:256]         Loaded most recent local fast block      number=1572 hash=719506…ed998e td=1050962697
+INFO [09-07|15:21:12.515|core/tx_journal.go:114]         Loaded local transaction journal         transactions=0 dropped=0
+INFO [09-07|15:21:12.515|core/tx_journal.go:166]         Regenerated local transaction journal    transactions=0 accounts=0
+WARN [09-07|15:21:12.515|eth/handler.go:117]             Blockchain not empty, fast sync disabled 
+INFO [09-07|15:21:12.515|p2p/server.go:396]              Starting P2P networking 
+INFO [09-07|15:21:12.516|p2p/server.go:743]              RLPx listener up                         self="enode://ce3e51046df204cba9a57bdba6d5621fa87f3ae6a8ad9085b006fa4382be8e43790cc9241bcbf57b2a0fbe35b0eacf438298bf40b775954402e686ae626707d7@[::]:30303?discport=0"
+INFO [09-07|15:21:12.517|node/node.go:315]               IPC endpoint opened                      url=/Users/fur/Projects/Block42Wallet/chaindata/geth.ipc
+INFO [09-07|15:21:12.517|node/node.go:343]               HTTP endpoint opened                     url=http://127.0.0.1:8142                                cors=* vhosts=localhost
+INFO [09-07|15:21:22.516|eth/downloader/downloader.go:355] Block synchronisation started 
+ERROR[09-07|15:21:23.232|core/blockchain.go:1427]          
+########## BAD BLOCK #########
+Chain config: {ChainID: 8100442 Homestead: 1 DAO: <nil> DAOSupport: false EIP150: 2 EIP155: 3 EIP158: 3 Byzantium: 4 Constantinople: <nil> Engine: ethash}
+
+Number: 1573
+Hash: 0x7e3c61e6f6ec250860427b3cc7220592b8678a996b8f44d5ef6986fafb0c38df
+
+
+Error: version blocked
+##############################
+ 
+WARN [09-07|15:21:23.232|eth/downloader/downloader.go:325] Synchronisation failed, dropping peer    peer=d6a19c04c67e0e67 err="retrieved hash chain is invalid"
+INFO [09-07|15:21:24.155|node/node.go:358]                 HTTP endpoint closed                     url=http://127.0.0.1:8142
+INFO [09-07|15:21:24.155|node/node.go:325]                 IPC endpoint closed                      endpoint=/Users/fur/Projects/Block42Wallet/chaindata/geth.ipc
+INFO [09-07|15:21:24.155|core/blockchain.go:672]           Writing cached state to disk             block=1572 hash=719506…ed998e root=a8f390…f8bf73
+INFO [09-07|15:21:24.155|trie/database.go:659]             Persisted trie from memory database      nodes=0 size=0.00B time=6.89µs gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-07|15:21:24.155|core/blockchain.go:672]           Writing cached state to disk             block=1571 hash=854d70…8c9f4b root=a8f390…f8bf73
+INFO [09-07|15:21:24.155|trie/database.go:659]             Persisted trie from memory database      nodes=0 size=0.00B time=995ns  gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-07|15:21:24.155|core/blockchain.go:672]           Writing cached state to disk             block=1445 hash=5f6822…d02798 root=8381f1…b908a6
+INFO [09-07|15:21:24.155|trie/database.go:659]             Persisted trie from memory database      nodes=0 size=0.00B time=812ns  gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-07|15:21:24.155|core/blockchain.go:685]           Blockchain manager stopped 
+INFO [09-07|15:21:24.155|eth/handler.go:221]               Stopping Ethereum protocol 
+INFO [09-07|15:21:24.155|eth/handler.go:242]               Ethereum protocol stopped 
+INFO [09-07|15:21:24.155|core/tx_pool.go:445]              Transaction pool stopped 
+INFO [09-07|15:21:24.156|ethdb/database.go:146]            Database closed                          database=/Users/fur/Projects/Block42Wallet/chaindata/geth/chaindata
+-bash: ./Users/fur/Projects/Block42Wallet/geth: No such file or directory
+-bash: ./Users/fur/Projects/Block42Wallet/geth: No such file or directory
+-bash: ./Users/fur/Projects/Block42Wallet/geth: No such file or directory
+INFO [09-07|15:39:37.896] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [09-07|15:39:37.905] Starting peer-to-peer node               instance=Geth/Client_AC86D7D7-C27F-5B7D-B29B-5634FDC5E110/v1.8.13-stable/darwin-amd64/go1.10.2
+INFO [09-07|15:39:37.906] Allocated cache and file handles         database=/Users/fur/Projects/Block42Wallet/chaindata/geth/chaindata cache=768 handles=128
+INFO [09-07|15:39:37.920] Initialised chain configuration          config="{ChainID: 8100442 Homestead: 1 DAO: <nil> DAOSupport: false EIP150: 2 EIP155: 3 EIP158: 3 Byzantium: 4 Constantinople: <nil> Engine: ethash}"
+INFO [09-07|15:39:37.920] Disk storage enabled for ethash caches   dir=/Users/fur/Projects/Block42Wallet/chaindata/geth/ethash count=3
+INFO [09-07|15:39:37.920] Disk storage enabled for ethash DAGs     dir=/Users/fur/.ethash                                      count=2
+INFO [09-07|15:39:37.921] Initialising Ethereum protocol           versions="[63 62]" network=8100442
+INFO [09-07|15:39:37.922] Loaded most recent local header          number=1572 hash=719506…ed998e td=1050962697
+INFO [09-07|15:39:37.922] Loaded most recent local full block      number=1572 hash=719506…ed998e td=1050962697
+INFO [09-07|15:39:37.922] Loaded most recent local fast block      number=1572 hash=719506…ed998e td=1050962697
+INFO [09-07|15:39:37.923] Loaded local transaction journal         transactions=0 dropped=0
+INFO [09-07|15:39:37.923] Regenerated local transaction journal    transactions=0 accounts=0
+WARN [09-07|15:39:37.923] Blockchain not empty, fast sync disabled 
+INFO [09-07|15:39:37.925] Starting P2P networking 
+INFO [09-07|15:39:37.927] RLPx listener up                         self="enode://ce3e51046df204cba9a57bdba6d5621fa87f3ae6a8ad9085b006fa4382be8e43790cc9241bcbf57b2a0fbe35b0eacf438298bf40b775954402e686ae626707d7@[::]:30303?discport=0"
+INFO [09-07|15:39:37.929] IPC endpoint opened                      url=/Users/fur/Projects/Block42Wallet/chaindata/geth.ipc
+INFO [09-07|15:39:37.929] HTTP endpoint opened                     url=http://127.0.0.1:8142                                cors=* vhosts=localhost
+INFO [09-07|15:39:47.934] Block synchronisation started 
+ERROR[09-07|15:39:48.691] 
+########## BAD BLOCK #########
+Chain config: {ChainID: 8100442 Homestead: 1 DAO: <nil> DAOSupport: false EIP150: 2 EIP155: 3 EIP158: 3 Byzantium: 4 Constantinople: <nil> Engine: ethash}
+
+Number: 1573
+Hash: 0x7e3c61e6f6ec250860427b3cc7220592b8678a996b8f44d5ef6986fafb0c38df
+
+
+Error: version blocked
+##############################
+ 
+WARN [09-07|15:39:48.691] Synchronisation failed, dropping peer    peer=d6a19c04c67e0e67 err="retrieved hash chain is invalid"
+ERROR[09-07|15:40:18.743] 
+########## BAD BLOCK #########
+Chain config: {ChainID: 8100442 Homestead: 1 DAO: <nil> DAOSupport: false EIP150: 2 EIP155: 3 EIP158: 3 Byzantium: 4 Constantinople: <nil> Engine: ethash}
+
+Number: 1573
+Hash: 0x7e3c61e6f6ec250860427b3cc7220592b8678a996b8f44d5ef6986fafb0c38df
+
+
+Error: version blocked
+##############################
+ 
+WARN [09-07|15:40:18.743] Synchronisation failed, dropping peer    peer=d6a19c04c67e0e67 err="retrieved hash chain is invalid"
+INFO [09-07|15:40:40.607] Got interrupt, shutting down... 
+INFO [09-07|15:40:40.612] HTTP endpoint closed                     url=http://127.0.0.1:8142
+INFO [09-07|15:40:40.613] IPC endpoint closed                      endpoint=/Users/fur/Projects/Block42Wallet/chaindata/geth.ipc
+INFO [09-07|15:40:40.613] Writing cached state to disk             block=1572 hash=719506…ed998e root=a8f390…f8bf73
+INFO [09-07|15:40:40.613] Persisted trie from memory database      nodes=0 size=0.00B time=26.904µs gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-07|15:40:40.614] Writing cached state to disk             block=1571 hash=854d70…8c9f4b root=a8f390…f8bf73
+INFO [09-07|15:40:40.614] Persisted trie from memory database      nodes=0 size=0.00B time=1.262µs  gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-07|15:40:40.614] Writing cached state to disk             block=1445 hash=5f6822…d02798 root=8381f1…b908a6
+INFO [09-07|15:40:40.614] Persisted trie from memory database      nodes=0 size=0.00B time=1.207µs  gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-07|15:40:40.614] Blockchain manager stopped 
+INFO [09-07|15:40:40.614] Stopping Ethereum protocol 
+INFO [09-07|15:40:40.614] Ethereum protocol stopped 
+INFO [09-07|15:40:40.614] Transaction pool stopped 
+INFO [09-07|15:40:40.615] Database closed                          database=/Users/fur/Projects/Block42Wallet/chaindata/geth/chaindata
+INFO [09-07|15:40:48.006] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [09-07|15:40:48.014] Starting peer-to-peer node               instance=Geth/Client_AC86D7D7-C27F-5B7D-B29B-5634FDC5E110/v1.8.13-stable/darwin-amd64/go1.10.2
+INFO [09-07|15:40:48.014] Allocated cache and file handles         database=/Users/fur/Projects/Block42Wallet/chaindata/geth/chaindata cache=768 handles=128
+INFO [09-07|15:40:48.023] Initialised chain configuration          config="{ChainID: 8100442 Homestead: 1 DAO: <nil> DAOSupport: false EIP150: 2 EIP155: 3 EIP158: 3 Byzantium: 4 Constantinople: <nil> Engine: ethash}"
+INFO [09-07|15:40:48.023] Disk storage enabled for ethash caches   dir=/Users/fur/Projects/Block42Wallet/chaindata/geth/ethash count=3
+INFO [09-07|15:40:48.023] Disk storage enabled for ethash DAGs     dir=/Users/fur/.ethash                                      count=2
+INFO [09-07|15:40:48.023] Initialising Ethereum protocol           versions="[63 62]" network=8100442
+INFO [09-07|15:40:48.024] Loaded most recent local header          number=1572 hash=719506…ed998e td=1050962697
+INFO [09-07|15:40:48.024] Loaded most recent local full block      number=1572 hash=719506…ed998e td=1050962697
+INFO [09-07|15:40:48.024] Loaded most recent local fast block      number=1572 hash=719506…ed998e td=1050962697
+INFO [09-07|15:40:48.024] Loaded local transaction journal         transactions=0 dropped=0
+INFO [09-07|15:40:48.024] Regenerated local transaction journal    transactions=0 accounts=0
+WARN [09-07|15:40:48.025] Blockchain not empty, fast sync disabled 
+INFO [09-07|15:40:48.025] Starting P2P networking 
+INFO [09-07|15:40:48.026] RLPx listener up                         self="enode://ce3e51046df204cba9a57bdba6d5621fa87f3ae6a8ad9085b006fa4382be8e43790cc9241bcbf57b2a0fbe35b0eacf438298bf40b775954402e686ae626707d7@[::]:30303?discport=0"
+INFO [09-07|15:40:48.027] IPC endpoint opened                      url=/Users/fur/Projects/Block42Wallet/chaindata/geth.ipc
+INFO [09-07|15:40:48.027] HTTP endpoint opened                     url=http://127.0.0.1:8142                                cors=* vhosts=localhost
+INFO [09-07|15:40:58.029] Block synchronisation started 
+ERROR[09-07|15:40:58.746] 
+########## BAD BLOCK #########
+Chain config: {ChainID: 8100442 Homestead: 1 DAO: <nil> DAOSupport: false EIP150: 2 EIP155: 3 EIP158: 3 Byzantium: 4 Constantinople: <nil> Engine: ethash}
+
+Number: 1573
+Hash: 0x7e3c61e6f6ec250860427b3cc7220592b8678a996b8f44d5ef6986fafb0c38df
+
+
+Error: version blocked
+##############################
+ 
+WARN [09-07|15:40:58.746] Synchronisation failed, dropping peer    peer=d6a19c04c67e0e67 err="retrieved hash chain is invalid"
+ERROR[09-07|15:41:28.741] 
+########## BAD BLOCK #########
+Chain config: {ChainID: 8100442 Homestead: 1 DAO: <nil> DAOSupport: false EIP150: 2 EIP155: 3 EIP158: 3 Byzantium: 4 Constantinople: <nil> Engine: ethash}
+
+Number: 1573
+Hash: 0x7e3c61e6f6ec250860427b3cc7220592b8678a996b8f44d5ef6986fafb0c38df
+
+
+Error: version blocked
+##############################
+ 
+WARN [09-07|15:41:28.741] Synchronisation failed, dropping peer    peer=d6a19c04c67e0e67 err="retrieved hash chain is invalid"
+ERROR[09-07|15:41:58.742] 
+########## BAD BLOCK #########
+Chain config: {ChainID: 8100442 Homestead: 1 DAO: <nil> DAOSupport: false EIP150: 2 EIP155: 3 EIP158: 3 Byzantium: 4 Constantinople: <nil> Engine: ethash}
+
+Number: 1573
+Hash: 0x7e3c61e6f6ec250860427b3cc7220592b8678a996b8f44d5ef6986fafb0c38df
+
+
+Error: version blocked
+##############################
+ 
+WARN [09-07|15:41:58.747] Synchronisation failed, dropping peer    peer=d6a19c04c67e0e67 err="retrieved hash chain is invalid"
+ERROR[09-07|15:42:28.747] 
+########## BAD BLOCK #########
+Chain config: {ChainID: 8100442 Homestead: 1 DAO: <nil> DAOSupport: false EIP150: 2 EIP155: 3 EIP158: 3 Byzantium: 4 Constantinople: <nil> Engine: ethash}
+
+Number: 1573
+Hash: 0x7e3c61e6f6ec250860427b3cc7220592b8678a996b8f44d5ef6986fafb0c38df
+
+
+Error: version blocked
+##############################
+ 
+WARN [09-07|15:42:28.753] Synchronisation failed, dropping peer    peer=d6a19c04c67e0e67 err="retrieved hash chain is invalid"
+ERROR[09-07|15:42:58.743] 
+########## BAD BLOCK #########
+Chain config: {ChainID: 8100442 Homestead: 1 DAO: <nil> DAOSupport: false EIP150: 2 EIP155: 3 EIP158: 3 Byzantium: 4 Constantinople: <nil> Engine: ethash}
+
+Number: 1573
+Hash: 0x7e3c61e6f6ec250860427b3cc7220592b8678a996b8f44d5ef6986fafb0c38df
+
+
+Error: version blocked
+##############################
+ 
+WARN [09-07|15:42:58.743] Synchronisation failed, dropping peer    peer=d6a19c04c67e0e67 err="retrieved hash chain is invalid"
+INFO [09-07|15:43:02.764] Got interrupt, shutting down... 
+INFO [09-07|15:43:02.764] HTTP endpoint closed                     url=http://127.0.0.1:8142
+INFO [09-07|15:43:02.765] IPC endpoint closed                      endpoint=/Users/fur/Projects/Block42Wallet/chaindata/geth.ipc
+INFO [09-07|15:43:02.765] Writing cached state to disk             block=1572 hash=719506…ed998e root=a8f390…f8bf73
+INFO [09-07|15:43:02.765] Persisted trie from memory database      nodes=0 size=0.00B time=5.981µs gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-07|15:43:02.765] Writing cached state to disk             block=1571 hash=854d70…8c9f4b root=a8f390…f8bf73
+INFO [09-07|15:43:02.765] Persisted trie from memory database      nodes=0 size=0.00B time=784ns   gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-07|15:43:02.770] Writing cached state to disk             block=1445 hash=5f6822…d02798 root=8381f1…b908a6
+INFO [09-07|15:43:02.771] Persisted trie from memory database      nodes=0 size=0.00B time=2.771µs gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-07|15:43:02.771] Blockchain manager stopped 
+INFO [09-07|15:43:02.771] Stopping Ethereum protocol 
+INFO [09-07|15:43:02.771] Ethereum protocol stopped 
+INFO [09-07|15:43:02.771] Transaction pool stopped 
+INFO [09-07|15:43:02.771] Database closed                          database=/Users/fur/Projects/Block42Wallet/chaindata/geth/chaindata
+INFO [09-10|13:55:15.048|cmd/utils/flags.go:871] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [09-10|13:55:15.076|node/node.go:166]       Starting peer-to-peer node               instance=Geth/Client_1/v1.8.13-stable/darwin-amd64/go1.10.2
+INFO [09-10|13:55:15.076|ethdb/database.go:71]   Allocated cache and file handles         database=/Users/fur/Projects/Block42Wallet/chaindata/geth/chaindata cache=768 handles=128
+INFO [09-10|13:55:15.118|eth/backend.go:119]     Initialised chain configuration          config="{ChainID: 8100442 Homestead: 1 DAO: <nil> DAOSupport: false EIP150: 2 EIP155: 3 EIP158: 3 Byzantium: 4 Constantinople: <nil> Engine: ethash}"
+INFO [09-10|13:55:15.118|consensus/ethash/ethash.go:421] Disk storage enabled for ethash caches   dir=/Users/fur/Projects/Block42Wallet/chaindata/geth/ethash count=3
+INFO [09-10|13:55:15.118|consensus/ethash/ethash.go:424] Disk storage enabled for ethash DAGs     dir=/Users/fur/.ethash                                      count=2
+INFO [09-10|13:55:15.118|eth/backend.go:136]             Initialising Ethereum protocol           versions="[63 62]" network=8100442
+INFO [09-10|13:55:15.119|core/blockchain.go:254]         Loaded most recent local header          number=1640 hash=4c586c…df9267 td=1104875766
+INFO [09-10|13:55:15.119|core/blockchain.go:255]         Loaded most recent local full block      number=1640 hash=4c586c…df9267 td=1104875766
+INFO [09-10|13:55:15.119|core/blockchain.go:256]         Loaded most recent local fast block      number=1640 hash=4c586c…df9267 td=1104875766
+INFO [09-10|13:55:15.120|core/tx_journal.go:114]         Loaded local transaction journal         transactions=0 dropped=0
+INFO [09-10|13:55:15.120|core/tx_journal.go:166]         Regenerated local transaction journal    transactions=0 accounts=0
+WARN [09-10|13:55:15.120|eth/handler.go:117]             Blockchain not empty, fast sync disabled 
+INFO [09-10|13:55:15.121|p2p/server.go:396]              Starting P2P networking 
+INFO [09-10|13:55:15.121|p2p/server.go:743]              RLPx listener up                         self="enode://ce3e51046df204cba9a57bdba6d5621fa87f3ae6a8ad9085b006fa4382be8e43790cc9241bcbf57b2a0fbe35b0eacf438298bf40b775954402e686ae626707d7@[::]:30303?discport=0"
+INFO [09-10|13:55:15.123|node/node.go:315]               IPC endpoint opened                      url=/Users/fur/Projects/Block42Wallet/chaindata/geth.ipc
+INFO [09-10|13:55:15.123|node/node.go:343]               HTTP endpoint opened                     url=http://127.0.0.1:8142                                cors=* vhosts=localhost
+INFO [09-10|13:55:15.190|eth/backend.go:319]             Etherbase automatically configured       address=0x17713fBB2443b9a4a91fA5c0214100AF5489E86F
+INFO [09-10|13:55:49.062|node/node.go:358]               HTTP endpoint closed                     url=http://127.0.0.1:8142
+INFO [09-10|13:55:49.062|node/node.go:325]               IPC endpoint closed                      endpoint=/Users/fur/Projects/Block42Wallet/chaindata/geth.ipc
+INFO [09-10|13:55:49.062|core/blockchain.go:672]         Writing cached state to disk             block=1640 hash=4c586c…df9267 root=1572ab…09db24
+INFO [09-10|13:55:49.062|trie/database.go:659]           Persisted trie from memory database      nodes=0 size=0.00B time=7.813µs gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-10|13:55:49.063|core/blockchain.go:672]         Writing cached state to disk             block=1639 hash=f21011…5401e2 root=1572ab…09db24
+INFO [09-10|13:55:49.063|trie/database.go:659]           Persisted trie from memory database      nodes=0 size=0.00B time=1.174µs gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-10|13:55:49.067|core/blockchain.go:672]         Writing cached state to disk             block=1513 hash=8fb5ab…037c4f root=e3c5c7…135a0d
+INFO [09-10|13:55:49.067|trie/database.go:659]           Persisted trie from memory database      nodes=0 size=0.00B time=2.552µs gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-10|13:55:49.067|core/blockchain.go:685]         Blockchain manager stopped 
+INFO [09-10|13:55:49.067|eth/handler.go:221]             Stopping Ethereum protocol 
+INFO [09-10|13:55:49.068|eth/handler.go:242]             Ethereum protocol stopped 
+INFO [09-10|13:55:49.068|core/tx_pool.go:445]            Transaction pool stopped 
+INFO [09-10|13:55:49.068|ethdb/database.go:146]          Database closed                          database=/Users/fur/Projects/Block42Wallet/chaindata/geth/chaindata
+appending output to nohup.out
+appending output to nohup.out
+INFO [09-10|14:37:07.754|cmd/utils/flags.go:871] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [09-10|14:37:07.764|node/node.go:166]       Starting peer-to-peer node               instance=Geth/Client_1/v1.8.13-stable/darwin-amd64/go1.10.2
+INFO [09-10|14:37:07.764|ethdb/database.go:71]   Allocated cache and file handles         database=/Users/fur/Projects/Block42Wallet/chaindata/geth/chaindata cache=768 handles=128
+INFO [09-10|14:37:07.775|eth/backend.go:119]     Initialised chain configuration          config="{ChainID: 8100442 Homestead: 1 DAO: <nil> DAOSupport: false EIP150: 2 EIP155: 3 EIP158: 3 Byzantium: 4 Constantinople: <nil> Engine: ethash}"
+INFO [09-10|14:37:07.775|consensus/ethash/ethash.go:421] Disk storage enabled for ethash caches   dir=/Users/fur/Projects/Block42Wallet/chaindata/geth/ethash count=3
+INFO [09-10|14:37:07.775|consensus/ethash/ethash.go:424] Disk storage enabled for ethash DAGs     dir=/Users/fur/.ethash                                      count=2
+INFO [09-10|14:37:07.776|eth/backend.go:136]             Initialising Ethereum protocol           versions="[63 62]" network=8100442
+INFO [09-10|14:37:07.776|core/blockchain.go:254]         Loaded most recent local header          number=1655 hash=ed1e3b…06e9bf td=1115612087
+INFO [09-10|14:37:07.776|core/blockchain.go:255]         Loaded most recent local full block      number=1655 hash=ed1e3b…06e9bf td=1115612087
+INFO [09-10|14:37:07.776|core/blockchain.go:256]         Loaded most recent local fast block      number=1655 hash=ed1e3b…06e9bf td=1115612087
+INFO [09-10|14:37:07.777|core/tx_journal.go:114]         Loaded local transaction journal         transactions=0 dropped=0
+INFO [09-10|14:37:07.777|core/tx_journal.go:166]         Regenerated local transaction journal    transactions=0 accounts=0
+WARN [09-10|14:37:07.777|eth/handler.go:117]             Blockchain not empty, fast sync disabled 
+INFO [09-10|14:37:07.777|p2p/server.go:396]              Starting P2P networking 
+INFO [09-10|14:37:07.777|p2p/server.go:743]              RLPx listener up                         self="enode://ce3e51046df204cba9a57bdba6d5621fa87f3ae6a8ad9085b006fa4382be8e43790cc9241bcbf57b2a0fbe35b0eacf438298bf40b775954402e686ae626707d7@[::]:30303?discport=0"
+INFO [09-10|14:37:07.779|node/node.go:315]               IPC endpoint opened                      url=/Users/fur/Projects/Block42Wallet/chaindata/geth.ipc
+INFO [09-10|14:37:07.779|node/node.go:343]               HTTP endpoint opened                     url=http://127.0.0.1:8142                                cors=* vhosts=localhost
+INFO [09-10|14:37:07.779|core/tx_pool.go:472]            Transaction pool price threshold updated price=18000000000
+INFO [09-10|14:37:07.779|eth/backend.go:319]             Etherbase automatically configured       address=0x17713fBB2443b9a4a91fA5c0214100AF5489E86F
+INFO [09-10|14:37:07.779|miner/miner.go:116]             Starting mining operation 
+INFO [09-10|14:37:07.779|miner/worker.go:488]            Commit new mining work                   number=1656 txs=0 uncles=0 elapsed=52.713µs
+INFO [09-10|14:37:08.053|consensus/ethash/sealer.go:95]  Mined a golden block at sender 
+INFO [09-10|14:37:08.053|miner/agent.go:104]             Successfully sealed new block            number=1656 hash=129f5b…db0ea2
+INFO [09-10|14:37:08.064|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1656 hash=129f5b…db0ea2
+INFO [09-10|14:37:08.064|miner/worker.go:488]            Commit new mining work                   number=1657 txs=0 uncles=0 elapsed=148.238µs
+INFO [09-10|14:37:09.760|miner/agent.go:104]             Successfully sealed new block            number=1657 hash=02b95b…9ba481
+INFO [09-10|14:37:09.761|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1657 hash=02b95b…9ba481
+INFO [09-10|14:37:09.761|miner/worker.go:488]            Commit new mining work                   number=1658 txs=0 uncles=0 elapsed=65.903µs
+INFO [09-10|14:37:11.054|miner/agent.go:104]             Successfully sealed new block            number=1658 hash=7f9274…096b32
+INFO [09-10|14:37:11.064|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1658 hash=7f9274…096b32
+INFO [09-10|14:37:11.065|miner/worker.go:488]            Commit new mining work                   number=1659 txs=0 uncles=0 elapsed=150.341µs
+INFO [09-10|14:37:15.029|cmd/utils/cmd.go:75]            Got interrupt, shutting down... 
+INFO [09-10|14:37:15.029|node/node.go:358]               HTTP endpoint closed                     url=http://127.0.0.1:8142
+INFO [09-10|14:37:15.029|node/node.go:325]               IPC endpoint closed                      endpoint=/Users/fur/Projects/Block42Wallet/chaindata/geth.ipc
+INFO [09-10|14:37:15.029|core/blockchain.go:672]         Writing cached state to disk             block=1658 hash=7f9274…096b32 root=0f483a…2f9d24
+INFO [09-10|14:37:15.029|trie/database.go:659]           Persisted trie from memory database      nodes=3 size=1.05kB time=80.383µs gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-10|14:37:15.029|core/blockchain.go:672]         Writing cached state to disk             block=1657 hash=02b95b…9ba481 root=0f483a…2f9d24
+INFO [09-10|14:37:15.029|trie/database.go:659]           Persisted trie from memory database      nodes=0 size=0.00B  time=872ns    gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-10|14:37:15.029|core/blockchain.go:672]         Writing cached state to disk             block=1531 hash=324fa7…4d169a root=ebb9c3…786967
+INFO [09-10|14:37:15.029|trie/database.go:659]           Persisted trie from memory database      nodes=0 size=0.00B  time=846ns    gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-10|14:37:15.029|core/blockchain.go:685]         Blockchain manager stopped 
+INFO [09-10|14:37:15.029|eth/handler.go:221]             Stopping Ethereum protocol 
+INFO [09-10|14:37:15.030|eth/handler.go:242]             Ethereum protocol stopped 
+INFO [09-10|14:37:15.030|core/tx_pool.go:445]            Transaction pool stopped 
+INFO [09-10|14:37:15.030|ethdb/database.go:146]          Database closed                          database=/Users/fur/Projects/Block42Wallet/chaindata/geth/chaindata
+appending output to nohup.out
+INFO [09-10|14:39:26.125|cmd/utils/flags.go:871] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [09-10|14:39:26.134|node/node.go:166]       Starting peer-to-peer node               instance=Geth/Client_1/v1.8.13-stable/darwin-amd64/go1.10.2
+INFO [09-10|14:39:26.134|ethdb/database.go:71]   Allocated cache and file handles         database=/Users/fur/Projects/Block42Wallet/chaindata/geth/chaindata cache=768 handles=128
+INFO [09-10|14:39:26.143|eth/backend.go:119]     Initialised chain configuration          config="{ChainID: 8100442 Homestead: 1 DAO: <nil> DAOSupport: false EIP150: 2 EIP155: 3 EIP158: 3 Byzantium: 4 Constantinople: <nil> Engine: ethash}"
+INFO [09-10|14:39:26.143|consensus/ethash/ethash.go:421] Disk storage enabled for ethash caches   dir=/Users/fur/Projects/Block42Wallet/chaindata/geth/ethash count=3
+INFO [09-10|14:39:26.144|consensus/ethash/ethash.go:424] Disk storage enabled for ethash DAGs     dir=/Users/fur/.ethash                                      count=2
+INFO [09-10|14:39:26.144|eth/backend.go:136]             Initialising Ethereum protocol           versions="[63 62]" network=8100442
+INFO [09-10|14:39:26.144|core/blockchain.go:254]         Loaded most recent local header          number=1663 hash=5b58e3…0fb19a td=1121132529
+INFO [09-10|14:39:26.144|core/blockchain.go:255]         Loaded most recent local full block      number=1663 hash=5b58e3…0fb19a td=1121132529
+INFO [09-10|14:39:26.144|core/blockchain.go:256]         Loaded most recent local fast block      number=1663 hash=5b58e3…0fb19a td=1121132529
+INFO [09-10|14:39:26.145|core/tx_journal.go:114]         Loaded local transaction journal         transactions=0 dropped=0
+INFO [09-10|14:39:26.145|core/tx_journal.go:166]         Regenerated local transaction journal    transactions=0 accounts=0
+WARN [09-10|14:39:26.145|eth/handler.go:117]             Blockchain not empty, fast sync disabled 
+INFO [09-10|14:39:26.145|p2p/server.go:396]              Starting P2P networking 
+INFO [09-10|14:39:26.146|p2p/server.go:743]              RLPx listener up                         self="enode://ce3e51046df204cba9a57bdba6d5621fa87f3ae6a8ad9085b006fa4382be8e43790cc9241bcbf57b2a0fbe35b0eacf438298bf40b775954402e686ae626707d7@[::]:30303?discport=0"
+INFO [09-10|14:39:26.147|node/node.go:315]               IPC endpoint opened                      url=/Users/fur/Projects/Block42Wallet/chaindata/geth.ipc
+INFO [09-10|14:39:26.147|node/node.go:343]               HTTP endpoint opened                     url=http://127.0.0.1:8142                                cors=* vhosts=localhost
+INFO [09-10|14:39:26.147|core/tx_pool.go:472]            Transaction pool price threshold updated price=18000000000
+INFO [09-10|14:39:26.147|eth/backend.go:319]             Etherbase automatically configured       address=0x17713fBB2443b9a4a91fA5c0214100AF5489E86F
+INFO [09-10|14:39:26.147|miner/miner.go:116]             Starting mining operation 
+INFO [09-10|14:39:26.147|miner/worker.go:488]            Commit new mining work                   number=1664 txs=0 uncles=0 elapsed=159.885µs
+INFO [09-10|14:39:29.232|consensus/ethash/sealer.go:95]  Mined a golden block at sender 
+INFO [09-10|14:39:29.233|miner/agent.go:104]             Successfully sealed new block            number=1664 hash=b821cc…3ad057
+INFO [09-10|14:39:29.233|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1664 hash=b821cc…3ad057
+INFO [09-10|14:39:29.233|miner/worker.go:488]            Commit new mining work                   number=1665 txs=0 uncles=0 elapsed=88.664µs
+INFO [09-10|14:39:30.283|miner/agent.go:104]             Successfully sealed new block            number=1665 hash=c4885d…9e7276
+INFO [09-10|14:39:30.288|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1665 hash=c4885d…9e7276
+INFO [09-10|14:39:30.288|miner/worker.go:488]            Commit new mining work                   number=1666 txs=0 uncles=0 elapsed=54.051µs
+INFO [09-10|14:39:36.901|miner/agent.go:104]             Successfully sealed new block            number=1666 hash=5c2121…b14531
+INFO [09-10|14:39:36.907|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1666 hash=5c2121…b14531
+INFO [09-10|14:39:36.907|miner/worker.go:488]            Commit new mining work                   number=1667 txs=0 uncles=0 elapsed=56.834µs
+INFO [09-10|14:39:38.081|miner/agent.go:104]             Successfully sealed new block            number=1667 hash=72a2f1…9bed04
+INFO [09-10|14:39:38.081|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1667 hash=72a2f1…9bed04
+INFO [09-10|14:39:38.082|miner/worker.go:488]            Commit new mining work                   number=1668 txs=0 uncles=0 elapsed=58.746µs
+INFO [09-10|14:39:38.513|cmd/utils/cmd.go:75]            Got interrupt, shutting down... 
+INFO [09-10|14:39:38.514|node/node.go:358]               HTTP endpoint closed                     url=http://127.0.0.1:8142
+INFO [09-10|14:39:38.514|node/node.go:325]               IPC endpoint closed                      endpoint=/Users/fur/Projects/Block42Wallet/chaindata/geth.ipc
+INFO [09-10|14:39:38.514|core/blockchain.go:672]         Writing cached state to disk             block=1667 hash=72a2f1…9bed04 root=283c42…045ab4
+INFO [09-10|14:39:38.514|trie/database.go:659]           Persisted trie from memory database      nodes=3 size=1.05kB time=70.124µs gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-10|14:39:38.514|core/blockchain.go:672]         Writing cached state to disk             block=1666 hash=5c2121…b14531 root=283c42…045ab4
+INFO [09-10|14:39:38.514|trie/database.go:659]           Persisted trie from memory database      nodes=0 size=0.00B  time=1.508µs  gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-10|14:39:38.519|core/blockchain.go:672]         Writing cached state to disk             block=1540 hash=09df9a…d4f377 root=ebb9c3…786967
+INFO [09-10|14:39:38.519|trie/database.go:659]           Persisted trie from memory database      nodes=0 size=0.00B  time=3.132µs  gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-10|14:39:38.519|core/blockchain.go:685]         Blockchain manager stopped 
+INFO [09-10|14:39:38.519|eth/handler.go:221]             Stopping Ethereum protocol 
+INFO [09-10|14:39:38.536|eth/handler.go:242]             Ethereum protocol stopped 
+INFO [09-10|14:39:38.536|core/tx_pool.go:445]            Transaction pool stopped 
+INFO [09-10|14:39:38.536|ethdb/database.go:146]          Database closed                          database=/Users/fur/Projects/Block42Wallet/chaindata/geth/chaindata
+appending output to nohup.out
+appending output to nohup.out
+INFO [09-10|14:40:11.489|cmd/utils/flags.go:871] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [09-10|14:40:11.497|node/node.go:166]       Starting peer-to-peer node               instance=Geth/Client_1/v1.8.13-stable/darwin-amd64/go1.10.2
+INFO [09-10|14:40:11.497|ethdb/database.go:71]   Allocated cache and file handles         database=/Users/fur/Projects/Block42Wallet/chaindata/geth/chaindata cache=768 handles=128
+INFO [09-10|14:40:11.508|eth/backend.go:119]     Initialised chain configuration          config="{ChainID: 8100442 Homestead: 1 DAO: <nil> DAOSupport: false EIP150: 2 EIP155: 3 EIP158: 3 Byzantium: 4 Constantinople: <nil> Engine: ethash}"
+INFO [09-10|14:40:11.508|consensus/ethash/ethash.go:421] Disk storage enabled for ethash caches   dir=/Users/fur/Projects/Block42Wallet/chaindata/geth/ethash count=3
+INFO [09-10|14:40:11.508|consensus/ethash/ethash.go:424] Disk storage enabled for ethash DAGs     dir=/Users/fur/.ethash                                      count=2
+INFO [09-10|14:40:11.508|eth/backend.go:136]             Initialising Ethereum protocol           versions="[63 62]" network=8100442
+INFO [09-10|14:40:11.509|core/blockchain.go:254]         Loaded most recent local header          number=1667 hash=72a2f1…9bed04 td=1123891385
+INFO [09-10|14:40:11.509|core/blockchain.go:255]         Loaded most recent local full block      number=1667 hash=72a2f1…9bed04 td=1123891385
+INFO [09-10|14:40:11.509|core/blockchain.go:256]         Loaded most recent local fast block      number=1667 hash=72a2f1…9bed04 td=1123891385
+INFO [09-10|14:40:11.509|core/tx_journal.go:114]         Loaded local transaction journal         transactions=0 dropped=0
+INFO [09-10|14:40:11.509|core/tx_journal.go:166]         Regenerated local transaction journal    transactions=0 accounts=0
+WARN [09-10|14:40:11.509|eth/handler.go:117]             Blockchain not empty, fast sync disabled 
+INFO [09-10|14:40:11.510|p2p/server.go:396]              Starting P2P networking 
+INFO [09-10|14:40:11.510|p2p/server.go:743]              RLPx listener up                         self="enode://ce3e51046df204cba9a57bdba6d5621fa87f3ae6a8ad9085b006fa4382be8e43790cc9241bcbf57b2a0fbe35b0eacf438298bf40b775954402e686ae626707d7@[::]:30303?discport=0"
+INFO [09-10|14:40:11.512|node/node.go:315]               IPC endpoint opened                      url=/Users/fur/Projects/Block42Wallet/chaindata/geth.ipc
+INFO [09-10|14:40:11.512|node/node.go:343]               HTTP endpoint opened                     url=http://127.0.0.1:8142                                cors=* vhosts=localhost
+INFO [09-10|14:40:11.512|core/tx_pool.go:472]            Transaction pool price threshold updated price=18000000000
+INFO [09-10|14:40:11.512|eth/backend.go:319]             Etherbase automatically configured       address=0x17713fBB2443b9a4a91fA5c0214100AF5489E86F
+INFO [09-10|14:40:11.512|miner/miner.go:116]             Starting mining operation 
+INFO [09-10|14:40:11.512|miner/worker.go:488]            Commit new mining work                   number=1668 txs=0 uncles=0 elapsed=67.292µs
+INFO [09-10|14:40:24.612|miner/agent.go:104]             Successfully sealed new block            number=1668 hash=da0379…79b3e8
+INFO [09-10|14:40:24.612|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1668 hash=da0379…79b3e8
+INFO [09-10|14:40:24.613|miner/worker.go:488]            Commit new mining work                   number=1669 txs=0 uncles=0 elapsed=64.237µs
+INFO [09-10|14:40:26.564|miner/agent.go:104]             Successfully sealed new block            number=1669 hash=3fc49f…de694d
+INFO [09-10|14:40:26.564|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1669 hash=3fc49f…de694d
+INFO [09-10|14:40:26.565|miner/worker.go:488]            Commit new mining work                   number=1670 txs=0 uncles=0 elapsed=55.212µs
+INFO [09-10|14:40:26.958|miner/agent.go:104]             Successfully sealed new block            number=1670 hash=b1e045…cf013b
+INFO [09-10|14:40:26.966|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1670 hash=b1e045…cf013b
+INFO [09-10|14:40:26.966|miner/worker.go:488]            Commit new mining work                   number=1671 txs=0 uncles=0 elapsed=48.44µs
+INFO [09-10|14:40:29.603|miner/agent.go:104]             Successfully sealed new block            number=1671 hash=057491…542729
+INFO [09-10|14:40:29.604|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1671 hash=057491…542729
+INFO [09-10|14:40:29.604|miner/worker.go:488]            Commit new mining work                   number=1672 txs=0 uncles=0 elapsed=50.772µs
+INFO [09-10|14:40:43.981|miner/agent.go:104]             Successfully sealed new block            number=1672 hash=b8bf2f…153bde
+INFO [09-10|14:40:43.981|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1672 hash=b8bf2f…153bde
+INFO [09-10|14:40:43.982|miner/worker.go:488]            Commit new mining work                   number=1673 txs=0 uncles=0 elapsed=127.814µs
+INFO [09-10|14:40:47.044|consensus/ethash/sealer.go:95]  Mined a golden block at sender 
+INFO [09-10|14:40:47.090|miner/agent.go:104]             Successfully sealed new block            number=1673 hash=10acf1…3d8ca9
+INFO [09-10|14:40:47.113|miner/unconfirmed.go:104]       🔗 block reached canonical chain          number=1668 hash=da0379…79b3e8
+INFO [09-10|14:40:47.113|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1673 hash=10acf1…3d8ca9
+INFO [09-10|14:40:47.113|miner/worker.go:488]            Commit new mining work                   number=1674 txs=0 uncles=0 elapsed=138.637µs
+INFO [09-10|14:40:52.609|consensus/ethash/sealer.go:95]  Mined a golden block at sender 
+INFO [09-10|14:40:52.609|miner/agent.go:104]             Successfully sealed new block            number=1674 hash=e5a2e7…681b39
+INFO [09-10|14:40:52.615|miner/unconfirmed.go:104]       🔗 block reached canonical chain          number=1669 hash=3fc49f…de694d
+INFO [09-10|14:40:52.615|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1674 hash=e5a2e7…681b39
+INFO [09-10|14:40:52.616|miner/worker.go:488]            Commit new mining work                   number=1675 txs=0 uncles=0 elapsed=96.104µs
+INFO [09-10|14:40:57.560|miner/agent.go:104]             Successfully sealed new block            number=1675 hash=9b35f7…d6d61e
+INFO [09-10|14:40:57.577|miner/unconfirmed.go:104]       🔗 block reached canonical chain          number=1670 hash=b1e045…cf013b
+INFO [09-10|14:40:57.577|miner/worker.go:488]            Commit new mining work                   number=1676 txs=0 uncles=0 elapsed=71.065µs
+INFO [09-10|14:40:57.577|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1675 hash=9b35f7…d6d61e
+INFO [09-10|14:41:00.463|miner/agent.go:104]             Successfully sealed new block            number=1676 hash=307371…b50f04
+INFO [09-10|14:41:00.464|miner/unconfirmed.go:104]       🔗 block reached canonical chain          number=1671 hash=057491…542729
+INFO [09-10|14:41:00.464|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1676 hash=307371…b50f04
+INFO [09-10|14:41:00.464|miner/worker.go:488]            Commit new mining work                   number=1677 txs=0 uncles=0 elapsed=123.106µs
+INFO [09-10|14:41:01.148|miner/agent.go:104]             Successfully sealed new block            number=1677 hash=c3dab7…ef02aa
+INFO [09-10|14:41:01.151|miner/unconfirmed.go:104]       🔗 block reached canonical chain          number=1672 hash=b8bf2f…153bde
+INFO [09-10|14:41:01.157|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1677 hash=c3dab7…ef02aa
+INFO [09-10|14:41:01.157|miner/worker.go:488]            Commit new mining work                   number=1678 txs=0 uncles=0 elapsed=65.494µs
+INFO [09-10|14:41:41.934|miner/agent.go:104]             Successfully sealed new block            number=1678 hash=c5b355…14ea65
+INFO [09-10|14:41:41.934|miner/unconfirmed.go:104]       🔗 block reached canonical chain          number=1673 hash=10acf1…3d8ca9
+INFO [09-10|14:41:41.934|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1678 hash=c5b355…14ea65
+INFO [09-10|14:41:41.934|miner/worker.go:488]            Commit new mining work                   number=1679 txs=0 uncles=0 elapsed=56.86µs
+INFO [09-10|14:41:42.863|miner/agent.go:104]             Successfully sealed new block            number=1679 hash=38667a…603533
+INFO [09-10|14:41:42.867|miner/unconfirmed.go:104]       🔗 block reached canonical chain          number=1674 hash=e5a2e7…681b39
+INFO [09-10|14:41:42.868|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1679 hash=38667a…603533
+INFO [09-10|14:41:42.868|miner/worker.go:488]            Commit new mining work                   number=1680 txs=0 uncles=0 elapsed=82.851µs
+INFO [09-10|14:41:46.399|miner/agent.go:104]             Successfully sealed new block            number=1680 hash=ac3d28…d69695
+INFO [09-10|14:41:46.402|miner/unconfirmed.go:104]       🔗 block reached canonical chain          number=1675 hash=9b35f7…d6d61e
+INFO [09-10|14:41:46.403|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1680 hash=ac3d28…d69695
+INFO [09-10|14:41:46.403|miner/worker.go:488]            Commit new mining work                   number=1681 txs=0 uncles=0 elapsed=223.151µs
+INFO [09-10|14:41:49.987|miner/agent.go:104]             Successfully sealed new block            number=1681 hash=f52f15…5f8bc2
+INFO [09-10|14:41:49.987|miner/unconfirmed.go:104]       🔗 block reached canonical chain          number=1676 hash=307371…b50f04
+INFO [09-10|14:41:49.987|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1681 hash=f52f15…5f8bc2
+INFO [09-10|14:41:49.987|miner/worker.go:488]            Commit new mining work                   number=1682 txs=0 uncles=0 elapsed=57.865µs
+INFO [09-10|14:41:50.276|miner/agent.go:104]             Successfully sealed new block            number=1682 hash=898682…15e5de
+INFO [09-10|14:41:50.284|miner/unconfirmed.go:104]       🔗 block reached canonical chain          number=1677 hash=c3dab7…ef02aa
+INFO [09-10|14:41:50.284|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1682 hash=898682…15e5de
+INFO [09-10|14:41:50.284|miner/worker.go:488]            Commit new mining work                   number=1683 txs=0 uncles=0 elapsed=43.594µs
+INFO [09-10|14:41:54.344|miner/agent.go:104]             Successfully sealed new block            number=1683 hash=56f649…99b12e
+INFO [09-10|14:41:54.346|miner/unconfirmed.go:104]       🔗 block reached canonical chain          number=1678 hash=c5b355…14ea65
+INFO [09-10|14:41:54.346|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1683 hash=56f649…99b12e
+INFO [09-10|14:41:54.347|miner/worker.go:488]            Commit new mining work                   number=1684 txs=0 uncles=0 elapsed=69.061µs
+INFO [09-10|14:42:02.778|miner/agent.go:104]             Successfully sealed new block            number=1684 hash=91517e…0c7859
+INFO [09-10|14:42:02.778|miner/unconfirmed.go:104]       🔗 block reached canonical chain          number=1679 hash=38667a…603533
+INFO [09-10|14:42:02.778|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1684 hash=91517e…0c7859
+INFO [09-10|14:42:02.778|miner/worker.go:488]            Commit new mining work                   number=1685 txs=0 uncles=0 elapsed=54.644µs
+INFO [09-10|14:42:12.424|miner/agent.go:104]             Successfully sealed new block            number=1685 hash=7cdd67…d4b15e
+INFO [09-10|14:42:12.425|miner/unconfirmed.go:104]       🔗 block reached canonical chain          number=1680 hash=ac3d28…d69695
+INFO [09-10|14:42:12.425|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1685 hash=7cdd67…d4b15e
+INFO [09-10|14:42:12.425|miner/worker.go:488]            Commit new mining work                   number=1686 txs=0 uncles=0 elapsed=50.317µs
+INFO [09-10|14:42:14.512|miner/agent.go:104]             Successfully sealed new block            number=1686 hash=1046a7…ea892b
+INFO [09-10|14:42:14.518|miner/unconfirmed.go:104]       🔗 block reached canonical chain          number=1681 hash=f52f15…5f8bc2
+INFO [09-10|14:42:14.518|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1686 hash=1046a7…ea892b
+INFO [09-10|14:42:14.518|miner/worker.go:488]            Commit new mining work                   number=1687 txs=0 uncles=0 elapsed=65µs
+INFO [09-10|14:42:16.011|miner/agent.go:104]             Successfully sealed new block            number=1687 hash=850547…1e7084
+INFO [09-10|14:42:16.011|miner/unconfirmed.go:104]       🔗 block reached canonical chain          number=1682 hash=898682…15e5de
+INFO [09-10|14:42:16.012|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1687 hash=850547…1e7084
+INFO [09-10|14:42:16.012|miner/worker.go:488]            Commit new mining work                   number=1688 txs=0 uncles=0 elapsed=60.107µs
+INFO [09-10|14:42:19.459|miner/agent.go:104]             Successfully sealed new block            number=1688 hash=ecd8eb…c9774c
+INFO [09-10|14:42:19.459|miner/unconfirmed.go:104]       🔗 block reached canonical chain          number=1683 hash=56f649…99b12e
+INFO [09-10|14:42:19.459|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1688 hash=ecd8eb…c9774c
+INFO [09-10|14:42:19.459|miner/worker.go:488]            Commit new mining work                   number=1689 txs=0 uncles=0 elapsed=352.282µs
+INFO [09-10|14:42:21.415|miner/agent.go:104]             Successfully sealed new block            number=1689 hash=51726c…3ba12b
+INFO [09-10|14:42:21.416|miner/unconfirmed.go:104]       🔗 block reached canonical chain          number=1684 hash=91517e…0c7859
+INFO [09-10|14:42:21.416|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1689 hash=51726c…3ba12b
+INFO [09-10|14:42:21.416|miner/worker.go:488]            Commit new mining work                   number=1690 txs=0 uncles=0 elapsed=54.077µs
+INFO [09-10|14:42:32.318|miner/agent.go:104]             Successfully sealed new block            number=1690 hash=2691fa…3d65bd
+INFO [09-10|14:42:32.323|miner/unconfirmed.go:104]       🔗 block reached canonical chain          number=1685 hash=7cdd67…d4b15e
+INFO [09-10|14:42:32.323|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1690 hash=2691fa…3d65bd
+INFO [09-10|14:42:32.323|miner/worker.go:488]            Commit new mining work                   number=1691 txs=0 uncles=0 elapsed=51.559µs
+INFO [09-10|14:42:35.215|miner/agent.go:104]             Successfully sealed new block            number=1691 hash=6bb536…3366a3
+INFO [09-10|14:42:35.221|miner/unconfirmed.go:104]       🔗 block reached canonical chain          number=1686 hash=1046a7…ea892b
+INFO [09-10|14:42:35.222|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1691 hash=6bb536…3366a3
+INFO [09-10|14:42:35.222|miner/worker.go:488]            Commit new mining work                   number=1692 txs=0 uncles=0 elapsed=224.287µs
+INFO [09-10|14:42:35.469|miner/agent.go:104]             Successfully sealed new block            number=1692 hash=ef8d68…33a35c
+INFO [09-10|14:42:35.474|miner/unconfirmed.go:104]       🔗 block reached canonical chain          number=1687 hash=850547…1e7084
+INFO [09-10|14:42:35.479|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1692 hash=ef8d68…33a35c
+INFO [09-10|14:42:35.479|miner/worker.go:488]            Commit new mining work                   number=1693 txs=0 uncles=0 elapsed=50.1µs
+INFO [09-10|14:42:35.955|consensus/ethash/sealer.go:95]  Mined a golden block at sender 
+INFO [09-10|14:42:35.955|miner/agent.go:104]             Successfully sealed new block            number=1693 hash=4f72a0…2630bb
+INFO [09-10|14:42:35.957|miner/unconfirmed.go:104]       🔗 block reached canonical chain          number=1688 hash=ecd8eb…c9774c
+INFO [09-10|14:42:35.957|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1693 hash=4f72a0…2630bb
+INFO [09-10|14:42:35.957|miner/worker.go:407]            Mining too far in the future             wait=2s
+INFO [09-10|14:42:37.967|miner/worker.go:488]            Commit new mining work                   number=1694 txs=0 uncles=0 elapsed=2.009s
+INFO [09-10|14:42:42.796|consensus/ethash/sealer.go:95]  Mined a golden block at sender 
+INFO [09-10|14:42:42.802|miner/agent.go:104]             Successfully sealed new block            number=1694 hash=f9cc25…77823a
+INFO [09-10|14:42:42.803|miner/unconfirmed.go:104]       🔗 block reached canonical chain          number=1689 hash=51726c…3ba12b
+INFO [09-10|14:42:42.803|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1694 hash=f9cc25…77823a
+INFO [09-10|14:42:42.803|miner/worker.go:488]            Commit new mining work                   number=1695 txs=0 uncles=0 elapsed=573.526µs
+INFO [09-10|14:42:45.378|miner/agent.go:104]             Successfully sealed new block            number=1695 hash=ec0224…1dffe8
+INFO [09-10|14:42:45.392|miner/unconfirmed.go:104]       🔗 block reached canonical chain          number=1690 hash=2691fa…3d65bd
+INFO [09-10|14:42:45.392|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1695 hash=ec0224…1dffe8
+INFO [09-10|14:42:45.393|miner/worker.go:488]            Commit new mining work                   number=1696 txs=0 uncles=0 elapsed=103.391µs
+INFO [09-10|14:42:47.301|miner/agent.go:104]             Successfully sealed new block            number=1696 hash=e71756…b73a34
+INFO [09-10|14:42:47.302|miner/unconfirmed.go:104]       🔗 block reached canonical chain          number=1691 hash=6bb536…3366a3
+INFO [09-10|14:42:47.302|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1696 hash=e71756…b73a34
+INFO [09-10|14:42:47.302|miner/worker.go:488]            Commit new mining work                   number=1697 txs=0 uncles=0 elapsed=61.47µs
+INFO [09-10|14:42:47.652|miner/agent.go:104]             Successfully sealed new block            number=1697 hash=5ed64d…13d9b9
+INFO [09-10|14:42:47.652|miner/unconfirmed.go:104]       🔗 block reached canonical chain          number=1692 hash=ef8d68…33a35c
+INFO [09-10|14:42:47.652|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1697 hash=5ed64d…13d9b9
+INFO [09-10|14:42:47.653|miner/worker.go:488]            Commit new mining work                   number=1698 txs=0 uncles=0 elapsed=94.633µs
+INFO [09-10|14:42:49.671|miner/agent.go:104]             Successfully sealed new block            number=1698 hash=adb5ca…62220f
+INFO [09-10|14:42:49.678|miner/unconfirmed.go:104]       🔗 block reached canonical chain          number=1693 hash=4f72a0…2630bb
+INFO [09-10|14:42:49.682|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1698 hash=adb5ca…62220f
+INFO [09-10|14:42:49.682|miner/worker.go:488]            Commit new mining work                   number=1699 txs=0 uncles=0 elapsed=64.251µs
+INFO [09-10|14:42:51.174|miner/agent.go:104]             Successfully sealed new block            number=1699 hash=63b4f2…4d9351
+INFO [09-10|14:42:51.175|miner/unconfirmed.go:104]       🔗 block reached canonical chain          number=1694 hash=f9cc25…77823a
+INFO [09-10|14:42:51.176|miner/unconfirmed.go:82]        🔨 mined potential block                  number=1699 hash=63b4f2…4d9351
+INFO [09-10|14:42:51.176|miner/worker.go:488]            Commit new mining work                   number=1700 txs=0 uncles=0 elapsed=162.275µs
+INFO [09-10|14:43:26.257|cmd/utils/cmd.go:75]            Got interrupt, shutting down... 
+INFO [09-10|14:43:26.257|node/node.go:358]               HTTP endpoint closed                     url=http://127.0.0.1:8142
+INFO [09-10|14:43:26.258|node/node.go:325]               IPC endpoint closed                      endpoint=/Users/fur/Projects/Block42Wallet/chaindata/geth.ipc
+INFO [09-10|14:43:26.258|core/blockchain.go:672]         Writing cached state to disk             block=1699 hash=63b4f2…4d9351 root=67502a…89b65e
+INFO [09-10|14:43:26.258|trie/database.go:659]           Persisted trie from memory database      nodes=3 size=1.05kB time=79.7µs gcnodes=0 gcsize=0.00B gctime=0s livenodes=10 livesize=3.16kB
+INFO [09-10|14:43:26.258|core/blockchain.go:672]         Writing cached state to disk             block=1698 hash=adb5ca…62220f root=67502a…89b65e
+INFO [09-10|14:43:26.258|trie/database.go:659]           Persisted trie from memory database      nodes=0 size=0.00B  time=866ns  gcnodes=0 gcsize=0.00B gctime=0s livenodes=10 livesize=3.16kB
+INFO [09-10|14:43:26.258|core/blockchain.go:672]         Writing cached state to disk             block=1572 hash=719506…ed998e root=a8f390…f8bf73
+INFO [09-10|14:43:26.258|trie/database.go:659]           Persisted trie from memory database      nodes=0 size=0.00B  time=1.564µs gcnodes=0 gcsize=0.00B gctime=0s livenodes=10 livesize=3.16kB
+INFO [09-10|14:43:26.258|core/blockchain.go:685]         Blockchain manager stopped 
+INFO [09-10|14:43:26.258|eth/handler.go:221]             Stopping Ethereum protocol 
+INFO [09-10|14:43:26.279|eth/handler.go:242]             Ethereum protocol stopped 
+INFO [09-10|14:43:26.279|core/tx_pool.go:445]            Transaction pool stopped 
+INFO [09-10|14:43:26.280|ethdb/database.go:146]          Database closed                          database=/Users/fur/Projects/Block42Wallet/chaindata/geth/chaindata

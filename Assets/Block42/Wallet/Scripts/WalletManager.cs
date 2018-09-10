@@ -224,6 +224,7 @@ namespace Block42
 			};
 			te.SelectAll();
 			te.Copy();
+			Debug.Log("WalletManager:CopyToClipboard - copied.");
 		}
 
 		#endregion

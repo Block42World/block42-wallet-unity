@@ -40,7 +40,7 @@ namespace Block42
 
 		public void OnWalletAddressClick()
 		{
-			WalletManager.CopyToClipboard(_walletAddressText.text);
+			WalletManager.CopyToClipboard(WalletManager.CurrentWalletAddress);
 		}
 
 	}
