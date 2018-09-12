@@ -2,7 +2,7 @@
 
 # Block42 Unity Wallet Plugin
 
-## About
+## Overview
 A Ethereum wallet and transaction system in Unity. This plug-in is inspired by Alto's [unit3d-blockchain-wallet](https://github.com/alto-io/unity3d-blockchain-wallet) and aims to be scalable and easy-to-use for all other projects with minimal coding. Changes includes separating UI logic from manager logic, optimize the code to follow Unity standard, as well as adding a number of demos for learning purposes. Few advanced usages are also added such as using geth and mining inside Unity.
 
 Please note that this is still in prototype and under heavy development. The final product may be subject to a number of quality assurance tests to verify conformance with specifications.
@@ -15,20 +15,16 @@ Please note that this is still in prototype and under heavy development. The fin
 ## Settings
 ScriptableObject is used globally for wallet setting, access the settings in menu through Block42 > Wallet > Settings
 ![Menu Wallet Settings](Documents/Intro/01_menu_wallet_settings.png)
-
-Inspector will show:
 ![Wallet Settings Inspector](Documents/Intro/02_wallet_settings_inspector.png)
 
 - Network: 
-Ropsten is set as default and used throughout all demos, you can use another testnet, or custom network by providing the URL in settings. Note that the smart contracts used in demos were deployed in Ropsten. For trying the demos in other networks or using your own smart contracts, deploy the contracts accordingly and set the ABI and the address in [ContractController](Assets/Block42/Wallet/Scripts/Contracts/ContractController.cs). See Demo [02-MyWalletBalance](Assets/Block42/Wallet/Demos/02-MyWalletBalance) on how to change them.
+Ropsten is set as default and used throughout all demos, you can use another testnet, or custom network by providing the URL in settings. Note that the smart contracts used in demos were only deployed in Ropsten. For trying the demos in other networks or using your own smart contracts, deploy the contracts accordingly and set the ABI and the address in [ContractController](Assets/Block42/Wallet/Scripts/Contracts/ContractController.cs). See Demo [02-MyWalletBalance](Assets/Block42/Wallet/Demos/02-MyWalletBalance) on how to change them.
 - Infura Api Key:
-Infura API are used to comuunicate with the blockchains. You can use my API key for development, but make sure you register your own one for [free](https://infura.io/) here and put your own key in.
+Infura API are used to comuunicate with the blockchains. You can use my API key for development, but make sure you register your own one for free [here](https://infura.io/) and put your own key in.
 - Custom Network URL:
-A mannual URL used for custom network only, it can be your localhost with your desired port, or a AWS server where you run your private chain node.
+A mannual URL used for custom network only, it can be your localhost with your desired port, or a [AWS server](https://medium.com/coinmonks/run-an-ethereum-node-on-aws-for-free-afca27f253ed) where you run your private chain node with RPC port opened.
 - Gas Price:
-The default gas price on your chain, it is used when sending ETH or token.
-- Off Chain Mode:
-A testing mode that can work offline and simulate all the chain function (excluding smart contract of course).
+The default gas price on your chain, it is used when sending ETH/token and mining.
 - Debug Log:
 A rich log mode for debugging purpose.
 

@@ -57,8 +57,6 @@ namespace Block42
 
 		public int gasPrice = 1;
 
-		public bool offChainMode = false;
-
 		public bool debugLog = false;
 
     }
