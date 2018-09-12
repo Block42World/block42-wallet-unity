@@ -1,7 +1,7 @@
 ![Block42](http://assets.block42.world/images/icons/block42_logo_200.png)
 
 # Block42 Unity Wallet Demo 4 - Run Node
-This demo execute an external executeable [geth](https://github.com/ethereum/go-ethereum) to run an ethereum node.
+This demo executes an external executable [geth](https://github.com/ethereum/go-ethereum) to run an ethereum node.
 
 ## Ethereum Setup
 In this example, we will run an ethereum node, so that we later can do mining, syncing and more on any public or private Ethereum chain.
@@ -11,8 +11,9 @@ For demo purpose, we don't want to sync and download all the blocks in any Ether
 
 Now, we need the [go-ethereum](https://github.com/ethereum/go-ethereum) cli client **geth**, read how to [install](https://github.com/ethereum/go-ethereum/wiki/Installing-Geth) it if you havn't done yet.
 
-### Why Geth? ###
+### Why Using External Executable Geth? ###
 There isn't any Unity or even C# library/client that can run Ethereum node, the closest is the [C++](https://ethereum.stackexchange.com/a/279/39970). Therefore, a workaround is to running an external executable from Unity using `System.Process`, then use Netehereum library to interact with it, just like in testnet or mainnet.
+In theory, Ethereum node client should be able to run in any language, as long as it follows the consensus and mining algorium, but that required a full understanding of the full source code of the Geth, so that it can be re-written into C# for Unity. We will keep that in mind and wish to do in sometime in the future.
 
 After install *geth*, put the executable just beside *Assets* folder, initialize the chaindata folder with commands:
 ```
