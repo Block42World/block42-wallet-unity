@@ -3,18 +3,14 @@ using UnityEngine.UI;
 
 namespace Block42
 {
-	public class MyWalletEthBalanceDemo : MonoBehaviour
+	public class MyWalletEthBalanceDemo : MyWalletDemo
 	{
 
 		[SerializeField] protected Text _walletAddressText, _balanceEthText;
 
-		protected virtual void Start()
+		protected override void Start()
 		{
-			if (WalletManager.CurrentWallet == null)
-			{
-				Debug.Log("MyWalletBalanceDemo:Start - No wallet available, create one now.");
-				WalletManager.CreateWallet("TestWallet", "password");
-			}
+			base.Start();
 
 			// Address of current wallet
 			_walletAddressText.text = WalletManager.CurrentWalletAddress;
@@ -31,16 +27,6 @@ namespace Block42
 				Debug.LogFormat("MyWalletBalanceDemo:Start - WalletManager.GetBalance() returned, balance={0}", balance);
 				_balanceEthText.text = balance.ToString();
 			});
-		}
-
-		public void OnWalletLinkClick()
-		{
-			WalletManager.OpenEtherscanAddress();
-		}
-
-		public void OnWalletAddressClick()
-		{
-			WalletManager.CopyToClipboard(WalletManager.CurrentWalletAddress);
 		}
 
 	}

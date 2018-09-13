@@ -24,6 +24,7 @@ namespace Block42
 
 		protected override void Start()
 		{
+			CreateWalletIfNotExists();
 			GethManager.StartGeth();
 			base.Start();
 			UpdateBlockNumber();
@@ -92,11 +93,14 @@ namespace Block42
 
 					if (blockNumber > _lastCheckedBlockNumber)
 					{
-						for (int i = _lastCheckedBlockNumber + 1; i <= blockNumber; i++)
+						if (blockNumber - _lastCheckedBlockNumber < 50) // If more than 50 blocks behind, just jump to the latest block
 						{
-							StartCoroutine(CheckBlock(i));
-							_blockNumberText.text = i.ToString();
-							yield return new WaitForSeconds(1);
+							for (int i = _lastCheckedBlockNumber + 1; i <= blockNumber; i++)
+							{
+								StartCoroutine(CheckBlock(i));
+								_blockNumberText.text = i.ToString();
+								yield return new WaitForSeconds(1);
+							}
 						}
 						_lastCheckedBlockNumber = blockNumber;
 					}

@@ -8,20 +8,27 @@ namespace Block42
 	/*
 	 *  This demo shows how to run a node by executing geth externally.
 	 */
-	public class RunNodeDemo : MonoBehaviour
+	public class RunNodeDemo : MyWalletDemo
 	{
 
-		[SerializeField] private NetworkStatusDemo _networkStatusDemo;
-		private Process _gethProcess;
-
-		private IEnumerator Start()
+		protected override void Start()
 		{
+			base.Start();
+
 			GethManager.StartGeth();
 
-			yield return new WaitForSeconds(1);
+			// Wait 1s then get the network status
+			Invoke("EnableNetworkStatusDemo", 1);
+		}
 
-			// Now can get the network status
-			_networkStatusDemo.enabled = true;
+		private void EnableNetworkStatusDemo()
+		{
+			GetComponent<NetworkStatusDemo>().enabled = true;
+		}
+
+		public void OnStopGethClick()
+		{
+			GethManager.StopGeth();
 		}
 
 	}
