@@ -43,7 +43,7 @@ This plugin uses [Nethereum](https://github.com/Nethereum/Nethereum) library to 
 
 If you already have Nethereum in your project, you can safely delete the whole [Plugins](Assets/Block42/Plugins) folder. You may also want to delete these sub-libraies to save building space:
 - [Nethereum.Web3](Assets/Block42/Plugins/Nethereum/Nethereum.Web3.dll) - Used to demonstrate the difference of using Web3 and UnityRPCRequests in Demo [02-StaticWalletBalance](Assets/Block42/Wallet/Demos/02-StaticWalletBalance). If you are not using any Web3 library in your project, you can delete this.
-- [Nethereum.Geth](Assets/Block42/Plugins/Nethereum/Nethereum.Geth) - Used to run an ethereum node and mining within Unity. See Demo [07-Mining](Assets/Block42/Wallet/Demos/07-Mining). If you are not using any Geth library or not mining in Unity, you can delete this.
+- [Nethereum.Geth](Assets/Block42/Plugins/Nethereum/Nethereum.Geth) - Used to run an ethereum node and mining within Unity. See Demo [07-Mining](Assets/Block42/Wallet/Demos/07-Mining) for details. If you are not using any Geth library or not mining in Unity, you can delete this.
 
 ## TODO
 - Add ERC721 token contract controller
