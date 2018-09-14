@@ -1,6 +1,6 @@
 ![Block42](http://assets.block42.world/images/icons/block42_logo_200.png)
 
-# Block42 Unity Wallet Demo 1 - Static Wallet Balance
+# Block42 Unity Wallet Demo 2 - Static Wallet Balance
 The demo shows the ETH balance of a given wallet address, and aim to demonstrate two different ways archiving it by using Web3 or EthGetGalanceUnityRequest.
 
 ## Demo Scene
