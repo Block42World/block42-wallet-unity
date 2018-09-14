@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using Nethereum.Hex.HexTypes;
+using Nethereum.KeyStore;
+using Nethereum.Signer;
 using Nethereum.JsonRpc.UnityClient;
 using Nethereum.RPC.Eth.DTOs;
 using Nethereum.Util;
@@ -19,7 +21,7 @@ namespace Block42
 
 		private const string FILE_NAME = "wallet.data";
 
-		private static List<WalletData> walletList = new List<WalletData>();
+		public static List<WalletData> walletList = new List<WalletData>();
 		private static int _currentWalletIndex = 0;
 
 		#endregion
@@ -51,7 +53,7 @@ namespace Block42
 
 		// Wallet save and load
 
-		private static void LoadWallets()
+		public static void LoadWallets() // Public for dmoe
 		{
 			if (File.Exists(_filePath))
 			{
@@ -59,6 +61,10 @@ namespace Block42
 				var fs = File.Open(_filePath, FileMode.Open);
 				walletList = (List<WalletData>)bf.Deserialize(fs);
 				fs.Close();
+			}
+			else
+			{
+				walletList.Clear();
 			}
 		}
 
@@ -73,31 +79,46 @@ namespace Block42
 		// Creates and encrypt a new account
 		public static void CreateWallet(string accountName, string password)
 		{
-			// Uses Nethereum.Signer to generate a new secret key
-			var ecKey = Nethereum.Signer.EthECKey.GenerateKey();
+			// Create a new random key for public key and private key
+			var ecKey = EthECKey.GenerateKey();
 
-			// After creating the secret key, we can get the public address and the private key with
-			// ecKey.GetPublicAddress() and ecKey.GetPrivateKeyAsBytes()
-			// (so it return it as bytes to be encrypted)
 			var address = ecKey.GetPublicAddress();
 			var privateKeyBytes = ecKey.GetPrivateKeyAsBytes();
 			var privateKey = ecKey.GetPrivateKey();
 
-			// Then we define a new KeyStore service
-			var keystoreservice = new Nethereum.KeyStore.KeyStoreService();
-
-			// And we can proceed to define encryptedJson with EncryptAndGenerateDefaultKeyStoreAsJson(),
-			// and send it the password, the private key and the address to be encrypted.
+			// Use key stroe service to generate a keystore
+			var keystoreservice = new KeyStoreService();
 			var encryptedJson = keystoreservice.EncryptAndGenerateDefaultKeyStoreAsJson(password, privateKeyBytes, address);
 
+			// Created the wallet with given info
+			AddWallet(accountName, ecKey.GetPublicAddress(), encryptedJson, ecKey.GetPrivateKey());
+		}
+
+		public static void ImportWallet(string accountName, string password, string encryptedJson)
+		{
+			// Use key store service to re-generate the key
+			var service = new KeyStoreService();
+			byte[] bytes = service.DecryptKeyStoreFromJson(password, encryptedJson);
+			var ecKey = new EthECKey(bytes, true);
+
+			// Created the wallet with given info
+			AddWallet(accountName, ecKey.GetPublicAddress(), encryptedJson, ecKey.GetPrivateKey());
+		}
+
+		private static void AddWallet(string accountName, string address, string encryptedJson, string privateKey)
+		{
 			WalletData wallet = new WalletData(accountName, address, encryptedJson, privateKey);
 			walletList.Add(wallet);
 
 			SaveWallets();
 
-			_currentWalletIndex = walletList.Count - 1;
-
+			_currentWalletIndex = walletList.Count - 1; // Use this wallet as current
 			walletCreated?.Invoke();
+		}
+
+		public static void SetCurrentWalletIndex(int index)
+		{
+			_currentWalletIndex = index;
 		}
 
 		#endregion
@@ -214,6 +235,167 @@ namespace Block42
 
 		#endregion
 
+		#region Block Number
+
+		public static void GetBlockNumber(UnityAction<int> callback)
+		{
+			CoroutineManager.Start(GetBlockNumberCoroutine(callback));
+		}
+
+		private static IEnumerator GetBlockNumberCoroutine(UnityAction<int> callback)
+		{
+			var blockNumberRequest = new EthBlockNumberUnityRequest(WalletSettings.current.networkUrl);
+			yield return blockNumberRequest.SendRequest();
+
+			if (blockNumberRequest.Exception == null)
+			{
+				callback((int)blockNumberRequest.Result.Value);
+			}
+			else
+			{
+				throw new System.InvalidOperationException("Block number request failed, exception=" + blockNumberRequest.Exception);
+			}
+		}
+
+		#endregion
+
+		#region Latest Block
+
+		public static void GetLatestBlock(UnityAction<BlockWithTransactions> callback)
+		{
+			CoroutineManager.Start(GetLatestBlockCoroutine(callback));
+		}
+
+		private static IEnumerator GetLatestBlockCoroutine(UnityAction<BlockWithTransactions> callback)
+		{
+			var blockNumberRequest = new EthBlockNumberUnityRequest(WalletSettings.current.networkUrl);
+			yield return blockNumberRequest.SendRequest();
+
+			if (blockNumberRequest.Exception == null)
+			{
+				var getBlockByNumberRequest = new EthGetBlockWithTransactionsByNumberUnityRequest(WalletSettings.current.networkUrl);
+				yield return getBlockByNumberRequest.SendRequest(new Nethereum.Hex.HexTypes.HexBigInteger(blockNumberRequest.Result.Value));
+
+				if (getBlockByNumberRequest.Exception == null)
+				{
+					callback(getBlockByNumberRequest.Result);
+				}
+				else
+				{
+					throw new System.InvalidOperationException("Get block request failed, exception=" + getBlockByNumberRequest.Exception);
+				}
+			}
+			else
+			{
+				throw new System.InvalidOperationException("Block number request failed, exception=" + blockNumberRequest.Exception);
+			}
+		}
+
+		public static event UnityAction<int> BlockNumberUpdatedEvent;
+		public static event UnityAction<BlockWithTransactions> LatestBlockUpdatedEvent;
+		private static IEnumerator _watchNewBlockIenumerator;
+		private static int _lastCheckedBlockNumber = -1;
+
+		public static void WatchNewBlocks()
+		{
+			// Get the current block number first
+			GetBlockNumber((blockNumber) =>
+			{
+				_lastCheckedBlockNumber = blockNumber;
+			});
+			_watchNewBlockIenumerator = WatchNewBlockCoroutine();
+			CoroutineManager.Start(_watchNewBlockIenumerator);
+		}
+
+		public static void StopWatchNewBlocks()
+		{
+			CoroutineManager.Stop(_watchNewBlockIenumerator);
+		}
+
+		private static IEnumerator WatchNewBlockCoroutine()
+		{
+			// Get block number every 5 seconds
+			var wait = new WaitForSeconds(5);
+			while (true)
+			{
+
+				var blockNumberRequest = new EthBlockNumberUnityRequest(WalletSettings.current.networkUrl);
+				yield return blockNumberRequest.SendRequest();
+
+				if (blockNumberRequest.Exception == null)
+				{
+					int blockNumber = (int)blockNumberRequest.Result.Value;
+
+					if (blockNumber > _lastCheckedBlockNumber)
+					{
+						if (WalletSettings.current.debugLog)
+							Debug.LogFormat("WalletManager:WatchNewBlock - block number updated = {1}", blockNumber);
+						
+						if (blockNumber - _lastCheckedBlockNumber < 50) // If more than 50 blocks behind, just jump to the latest block
+						{
+							for (int i = _lastCheckedBlockNumber + 1; i <= blockNumber; i++)
+							{
+								BlockNumberUpdatedEvent?.Invoke(blockNumber);
+								CoroutineManager.Start(GetLatestBlockCoroutine(i));
+								yield return new WaitForSeconds(1);
+							}
+						}
+						_lastCheckedBlockNumber = blockNumber;
+					}
+				}
+				else
+				{
+					throw new System.InvalidOperationException("Block number request failed, exception=" + blockNumberRequest.Exception);
+				}
+
+				yield return wait;
+
+			}
+		}
+
+		private static IEnumerator GetLatestBlockCoroutine(int blockNumber)
+		{
+			var getBlockByNumberRequest = new EthGetBlockWithTransactionsByNumberUnityRequest(WalletSettings.current.networkUrl);
+			yield return getBlockByNumberRequest.SendRequest(new HexBigInteger(blockNumber));
+
+			if (getBlockByNumberRequest.Exception == null)
+			{
+				if (WalletSettings.current.debugLog)
+					Debug.LogFormat("WalletManager:GetLatestBlock - Latest block #{0}, miner={1}, hash={2}", blockNumber, getBlockByNumberRequest.Result.Miner, getBlockByNumberRequest.Result.BlockHash);
+				LatestBlockUpdatedEvent?.Invoke(getBlockByNumberRequest.Result);
+			}
+			else
+			{
+				throw new System.InvalidOperationException("Block number request failed, exception=" + getBlockByNumberRequest.Exception);
+			}
+		}
+
+		#endregion
+
+		#region Gas Price
+
+		public static void GetGasPrice(UnityAction<decimal> callback)
+		{
+			CoroutineManager.Start(GetGasPriceCoroutine(callback));
+		}
+
+		private static IEnumerator GetGasPriceCoroutine(UnityAction<decimal> callback)
+		{
+			var gasPriceRequest = new EthGasPriceUnityRequest(WalletSettings.current.networkUrl);
+			yield return gasPriceRequest.SendRequest();
+
+			if (gasPriceRequest.Exception == null)
+			{
+				callback(UnitConversion.Convert.FromWei(gasPriceRequest.Result.Value, 9));
+			}
+			else
+			{
+				throw new System.InvalidOperationException("Gas price request failed, exception=" + gasPriceRequest.Exception);
+			}
+		}
+
+		#endregion
+
 		#region Tools
 
 		public static void CopyToClipboard(string s)
@@ -241,6 +423,11 @@ namespace Block42
 			Application.OpenURL(WalletSettings.current.networkEtherscanUrl + "address/" + address);
 		}
 
+		public static void DeleteWalletDataFile()
+		{
+			File.Delete(_filePath);
+		}
+
 		#endregion
 
 #if UNITY_EDITOR
@@ -250,7 +437,7 @@ namespace Block42
 		{
 			if (UnityEditor.EditorUtility.DisplayDialog("Remove Wallets", "Are you sure to remove all saved wallets? This cannot be reverted.", "Yes", "Cancel"))
 			{
-				File.Delete(_filePath);
+				DeleteWalletDataFile();
 				if (Application.isPlaying)
 				{ // Reload scene
 					UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);

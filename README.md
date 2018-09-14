@@ -35,13 +35,14 @@ A rich log mode for debugging purpose.
 - ERC721ContractController: (TODO) Same as `ERC20ContractController` but implements a ERC721 standard token contract.
 
 ## Demos
-This projects contains a number of demos from basic to intermediate, go to each demo in [Demos](Assets/Block42/Wallet/Demos) folder for more details. It's recommended to spend 10 minutes to go through all demos before any integration. 
+This projects contains a number of demos from basic to intermediate, and aimed to be Ethereum-beginner-prove. Go to each demo in [Demos](Assets/Block42/Wallet/Demos) folder for more details. It's recommended to spend 10 minutes to quickly go through all demos before any integration. 
 
 
-## Notes
-- [Nethereum](https://github.com/Nethereum/Nethereum) is used as the .NET integration library for Ethereum here. If you already have that in your project, you can safely delete [Plugins](Assets/Block42/Plugins) folder. 
-- [Nethereum.Web3](Assets/Block42/Plugins/Nethereum/Nethereum.Web3.dll) is used to demonstrate the difference of using Web3 and UnityRPCRequests in Demo [01-StaticWalletBalance](Assets/Block42/Wallet/Demos/01-StaticWalletBalance). If you are not using any Web3 library in your project, you can delete the library to save building space.
-- [Nethereum.Geth](Assets/Block42/Plugins/Nethereum/Nethereum.Geth) is used to demonstrate how to mine ethereum of using Geth in Demo [04-Mining](Assets/Block42/Wallet/Demos/04-Mining). If you are not using any Geth library in your project or not mining in Unity, you can delete library to save building space.
+## Nethereum
+This plugin use [Nethereum](https://github.com/Nethereum/Nethereum) library to interact with Ethereum. Most of the time you can simply call functions in [`WalletManager`](Assets/Block42/Wallet/Scripts/WalletManager.cs) and worry-free about it.
+If you already have Nethereum in your project, you can safely delete the whole [Plugins](Assets/Block42/Plugins) folder. You may also want to delete these sub-libraies to save building space:
+- [Nethereum.Web3](Assets/Block42/Plugins/Nethereum/Nethereum.Web3.dll) is used to demonstrate the difference of using Web3 and UnityRPCRequests in Demo [02-StaticWalletBalance](Assets/Block42/Wallet/Demos/02-StaticWalletBalance). If you are not using any Web3 library in your project, you can delete this.
+- [Nethereum.Geth](Assets/Block42/Plugins/Nethereum/Nethereum.Geth) is used to demonstrate how to run an ethereum node and mining with Unity in Demo [07-Mining](Assets/Block42/Wallet/Demos/07-Mining). If you are not using any Geth library in your project or not mining in Unity, you can delete this.
 
 ## TODO
 - Add ERC721 token contract controller

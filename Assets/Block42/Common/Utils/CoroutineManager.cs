@@ -8,10 +8,15 @@ namespace Block42
     public class CoroutineManager : Singleton<CoroutineManager>
     {
 
-        public static void Start(IEnumerator enumerator)
+		public static Coroutine Start(IEnumerator enumerator)
         {
-            Instance?.StartCoroutine(enumerator);
+            return Instance.StartCoroutine(enumerator);
         }
+
+		public static void Stop(IEnumerator enumerator)
+		{
+			Instance.StopCoroutine(enumerator);
+		}
 
     }
 

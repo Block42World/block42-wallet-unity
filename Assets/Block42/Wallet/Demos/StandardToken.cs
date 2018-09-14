@@ -8,7 +8,7 @@ using System.Numerics;
 namespace Block42
 {
 
-	// A ERC20 standard token class using Web3
+	// A ERC20 standard token class using Web3 for demo purposes, you can delete this file if you not using it.
     public class StandardToken
     {
 
