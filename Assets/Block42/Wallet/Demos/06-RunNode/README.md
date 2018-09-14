@@ -1,7 +1,7 @@
 ![Block42](http://assets.block42.world/images/icons/block42_logo_200.png)
 
 # Block42 Unity Wallet Demo 6 - Run Node
-This demo executes an external executable [geth](https://github.com/ethereum/go-ethereum) to run an ethereum node.
+This demo executes an external executable [*geth*](https://github.com/ethereum/go-ethereum) to run an ethereum node.
 
 ## Ethereum Setup
 In this example, we will run an ethereum node, so that we later can do mining, syncing and more on any public or private Ethereum chain.
@@ -9,7 +9,7 @@ In this example, we will run an ethereum node, so that we later can do mining, s
 For demo purpose, we don't want to sync and download all the blocks in any Ethereum public chain, so we just use a private chain. To interact with a private chain, as mentioned in intro, we set the Network to **Custom** and set the Custom Network Url to **http://localhost:8142** (pick a port of your choice):
 ![Wallet Settings](/Documents/Demo-06-RunNode/01_wallet_setting.png)
 
-Now, we need the [go-ethereum](https://github.com/ethereum/go-ethereum) cli client **geth**, read how to [install](https://github.com/ethereum/go-ethereum/wiki/Installing-Geth) it if you havn't done yet.
+Now, we need the [go-ethereum](https://github.com/ethereum/go-ethereum) cli client *geth*, read how to [install](https://github.com/ethereum/go-ethereum/wiki/Installing-Geth) it if you havn't done yet.
 
 ### Why Using External Executable Geth? ###
 There isn't any Unity or even C# library/client that can run Ethereum node, the closest is the [C++](https://ethereum.stackexchange.com/a/279/39970). Therefore, a workaround is to running an external executable from Unity using `System.Process`, then use Netehereum library to interact with it, just like in testnet or mainnet.
@@ -60,7 +60,7 @@ Use `geth help` to check what other options do.
 These options can be set in **Block42 > Wallet > Geth Settings** menu:
 ![Geth Settings](/Documents/Demo-06-RunNode/03_geth_settings.png)
 
-Play the scene now and you can see geth is run at background, the chain status is read from the running geth node and displayed. You can check if geth is running by checking command:
+Play the scene now and you can see *geth* is run at background, the chain status is read from the running *geth* node and displayed. You can check if *geth* is running by checking command:
 ```
 # ps aux | grep geth
 ```
