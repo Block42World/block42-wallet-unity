@@ -28,7 +28,7 @@ The default gas price on your chain, it is used when sending ETH/token and minin
 - __Debug Log__:
 A rich log mode for debugging purpose.
 
-## Core Scripts
+## Script Overview
 - [`WalletManager`](Assets/Block42/Wallet/Scripts/WalletManager.cs): A master manager on managing wallets, such as create, save and load. This is a static class so all variables and methods can be easily access everywhere. Transactions are asynchronous and `Couroutine` is required to process transaction. For easier access, a [`CouroutineManager`](Assets/Block42/Common/Utils/CoroutineManager.cs) is automatically created for handling all coroutines of static classes.
 - [`ContractController`](Assets/Block42/Wallet/Scripts/Contracts/ContractController.cs): A base class that holds the ABI and address of the smart contract, all other contract should be inherent from this and attach to anywhere of the scene.
 - [`ERC20ContractController`](Assets/Block42/Wallet/Scripts/Contracts/ContractController.cs): A child class inherited from ContractController that implements all the method of a ERC20 standard token contract. 
