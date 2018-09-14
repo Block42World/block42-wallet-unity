@@ -17,15 +17,15 @@ ScriptableObject is used globally for wallet setting, access the settings in men
 ![Menu Wallet Settings](Documents/Intro/01_menu_wallet_settings.png)
 ![Wallet Settings Inspector](Documents/Intro/02_wallet_settings_inspector.png)
 
-- Network: 
+- **Network**: 
 Ropsten is set as default and used throughout all demos, you can use another testnet, or custom network by providing the URL in settings. Note that the smart contracts used in demos were only deployed in Ropsten. For trying the demos in other networks or using your own smart contracts, deploy the contracts accordingly and set the ABI and the address in [ContractController](Assets/Block42/Wallet/Scripts/Contracts/ContractController.cs). See Demo [02-MyWalletBalance](Assets/Block42/Wallet/Demos/02-MyWalletBalance) on how to change them.
 - Infura Api Key:
 Infura API are used to comuunicate with the blockchains. You can use my API key for development, but make sure you register your own one for free [here](https://infura.io/) and put your own key in.
-- Custom Network URL:
+- **Custom Network URL**:
 A mannual URL used for custom network only, it can be your localhost with your desired port, or a [AWS server](https://medium.com/coinmonks/run-an-ethereum-node-on-aws-for-free-afca27f253ed) where you run your private chain node with RPC port opened.
-- Gas Price:
+- **Gas Price**:
 The default gas price on your chain, it is used when sending ETH/token and mining.
-- Debug Log:
+- **Debug Log**:
 A rich log mode for debugging purpose.
 
 ## Core Scripts
