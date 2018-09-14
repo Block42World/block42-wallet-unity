@@ -1,14 +1,14 @@
 ![Block42](http://assets.block42.world/images/icons/block42_logo_200.png)
 
 # Block42 Unity Wallet Demo 7 - Mining
-This demo continues from Demo 6 and uses [**Nethereum.Geth**](../../../../Plugins/Nethereum.Geth) to interact with the running node for mining. Isn't that great that you can actually mine in game?!
+This demo continues from Demo 6 and uses [**Nethereum.Geth**](../../../../Plugins/Nethereum.Geth) to interact with the running node for mining. Isn't that great that you can actually mine in game, while it's not affecting the gaming experience too much? (No fake mining simulation in some mobile blockchain games)
 
 ## Demo Scene
 Open [**Mining.unity**](Mining.unity) scene, DemoScripts GameObject has only [**MiningDemo.cs**](MiningDemo.cs):
-![Settings](/Documents/Demo-05-Mining/01_demo_scripts.png)
+![Settings](/Documents/Demo-07-Mining/01_demo_scripts.png)
 
 Then play the scene and click start mining, the script will check the latest block and update the ETH balance if the latest block is mined by this.
-![Screenshot](/Documents/Demo-05-Mining/02_screenshot.png)
+![Screenshot](/Documents/Demo-07-Mining/02_screenshot.png)
 
 ## Scripts Overview
 3 keys that should be noted in [MiningDemo.cs](MiningDemo.cs):
